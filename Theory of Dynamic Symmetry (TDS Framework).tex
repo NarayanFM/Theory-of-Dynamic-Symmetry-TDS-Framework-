@@ -1,0 +1,2781 @@
+\documentclass[12pt,a4paper]{article}
+
+% ====================== ENCODING AND FONTS ======================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{cmap}
+
+% ====================== MATH AND SYMBOLS ======================
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{slashed}
+\usepackage{braket}
+\usepackage{newtxtext,newtxmath}
+\DeclareMathOperator{\sech}{sech} % <-- добавлено: гиперболический секанс
+% ====================== GEOMETRY AND LAYOUT ======================
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{microtype}
+
+\newcommand{\Tau}{\mathrm{T}}
+
+\geometry{top=2.7cm, bottom=2.7cm, left=2.8cm, right=2.8cm}
+\setstretch{1.25}
+\setlength{\parskip}{0.9em}
+\setlength{\parindent}{0pt}
+
+\titlespacing*{\section}{0pt}{1.5em}{0.9em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.7em}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.5em}
+
+\AtBeginDocument{%
+  \addtolength{\abovedisplayskip}{0.4em}
+  \addtolength{\belowdisplayskip}{0.4em}
+  \addtolength{\abovedisplayshortskip}{0.4em}
+  \addtolength{\belowdisplayshortskip}{0.4em}
+}
+
+% ====================== GRAPHICS AND HYPERREF ======================
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% ====================== TOC DEPTH ======================
+\setcounter{tocdepth}{1}
+
+% ====================== PDF METADATA ======================
+\hypersetup{
+  pdfsubject={Reversible symmetry lattice, informational physics, topology of defects},
+  pdfkeywords={reversible computation, informational curvature, gauge symmetry, TDS framework, Valeri Schäfer},
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black,
+  citecolor=black,
+  pdftitle={Symmetry Anomalies and Reversible Lattice Dynamics: An Informational Framework for the Origin of Matter and Fields},
+  pdfauthor={Valeri Schäfer}
+}
+
+% ====================== TITLE ======================
+\title{\textbf{Symmetry Anomalies and Reversible Lattice Dynamics: An Informational Framework for the Origin of Matter and Fields --- Theory of Dynamic Symmetry (TDS Framework)}}
+\author{Valeri Schäfer}
+\date{Zenodo DOI: \href{https://doi.org/10.5281/zenodo.17465190}{10.5281/zenodo.17465190} \\ 
+ -- Actual version November 2025}
+
+% ====================== DOCUMENT ======================
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+\begin{abstract}
+This paper presents a discrete, reversible framework of spacetime in which matter and fields arise from persistent \textit{symmetry anomalies} within an informational lattice.
+Here, a “symmetry anomaly” denotes a locally stable mismatch in discrete symmetry configuration that cannot be removed under bijective evolution, \textit{not to be confused with field-theoretic (quantum) anomalies}.
+The model connects reversible computation, digital physics, and field theory by interpreting matter as topological defects in a binary substrate and fields as geometric responses of that substrate to local asymmetry.
+Energy, momentum, and charge emerge as invariants of reversible, information-preserving dynamics, while unitarity in quantum mechanics is interpreted as a macroscopic manifestation of microscopic reversibility.
+\end{abstract}
+
+\newpage
+\section*{Core Concepts and Relations of the TDS Framework}
+
+The \textbf{TDS Framework (Theory of Dynamic Symmetry)} proposes that physical reality emerges from a discrete, reversible informational substrate—the \textit{Reversible Symmetry Lattice (RSL)}—in which matter, fields, and geometry are manifestations of persistent symmetry dynamics. The following core terms and relations define its conceptual and mathematical foundation.
+
+\paragraph{Reversible Symmetry Lattice (RSL).}
+A discrete informational medium composed of binary or spin-like cells that evolve reversibly. Perfect symmetry corresponds to the vacuum; local asymmetry generates informational tension and motion.
+
+\paragraph{Symmetry Anomaly.}
+A stable, localized configuration where local symmetry cannot be restored under reversible evolution. Such an anomaly behaves as matter—a topological defect in the informational fabric.
+
+\paragraph{Informational Tension.}
+A measure of deviation from local symmetry within the lattice, representing the degree of reversible imbalance.
+
+\paragraph{Informational Inertia.}
+The resistance of a localized symmetry anomaly to motion, arising from correlated reversible rearrangements of the lattice. It defines mass as
+\[
+M = \hbar \omega_0 ,
+\]
+where $\omega_0$ is the intrinsic oscillation frequency of the defect.
+
+\paragraph{Photon Window.}
+The quantized amplitude range of reversible lattice waves, bounded by informational reversibility and Planck-scale stability:
+\[
+A_{\min} = \sqrt{\frac{\hbar\,\omega}{
+2N_{\text{cell}}\,t_P\,\sin^2(\omega/2)}} , \qquad
+A_{\max} = \sqrt{\frac{\alpha E_P}{2\sin^2(\omega/2)}} .
+\]
+This defines the domain where light exists as a perfectly reversible flow of symmetry restoration.
+
+\paragraph{Informational Curvature.}
+The geometric manifestation of distributed symmetry tension. The local informational metric is defined as
+\[
+g^{(\text{info})}_{ij} \propto \partial_i\rho\,\partial_j\rho ,
+\]
+linking informational gradients to emergent spacetime curvature.
+
+\subsection*{Discrete Geometry and the Effective Value of $\pi$}
+\addcontentsline{toc}{subsection}{Discrete Geometry and the Effective Value of $\pi$}
+
+At the Planck scale, geometry cannot maintain a perfectly smooth circular symmetry. 
+A “circle” of only a few lattice units in radius behaves more like a polygon — a closed path made of discrete segments of length~$\ell_P$. 
+In such a coarse world, the notion of~$\pi$ is no longer a constant but an \emph{effective quantity} that depends on the radius measured in Planck lengths. 
+For very small radii, only a few discrete configurations fit along the perimeter, producing coarse values like~$3$, $3.5$, or~$4$ for the ratio of circumference to diameter. 
+As the radius grows and more Planck cells fit along the arc, the polygonal boundary becomes smoother, and the error in measuring the circumference decreases roughly \emph{inversely with the radius}:
+\[
+\delta\pi(R) \sim \frac{\ell_P}{R}.
+\]
+Hence, the number of valid digits of~$\pi$ visible to an observer increases logarithmically with scale,
+\[
+N_\pi(R) \approx \log_{10}\!\left(\frac{R}{\ell_P}\right).
+\]
+Each tenfold increase in radius reveals roughly one additional correct digit of~$\pi$.  
+In this sense, $\pi$ emerges as a macroscopic limit of discrete informational geometry — a constant that only becomes truly constant once the underlying lattice contains enough reversible cells to support a smooth curvature.
+
+
+\paragraph{Dynamic Symmetry Restoration.}
+The continuous, reversible process by which the lattice compensates asymmetry. At macroscopic scales it manifests as fields, unitarity, and the arrow of time.
+
+\paragraph{Informational Foam.}
+The fluctuating vacuum of the reversible lattice, arising from infinitesimal asynchronous updates—an ever-present dynamic background sustaining motion and change.
+
+\section*{Fundamental Lattice Law}
+
+\noindent
+\textbf{Postulate.}
+The Reversible Symmetry Lattice (RSL) evolves as a closed, information-preserving system 
+with Planck-scale spacing \(a=\ell_P\) and update period \(\tau=t_P\).
+Its global state \(S_t\) follows a bijective reversible map:
+\[
+S_{t+1}=B\,S_t, \qquad B^{-1}\ \text{exists},
+\]
+ensuring total informational invariance:
+\[
+I_{\text{total}}=H(S_t)=H(S_{t+1})=\text{const}.
+\]
+At every step, local dynamics conserve the fundamental symmetry balance:
+\[
+E_{\text{sym}}[S_t]+E_{\text{asym}}[S_t]=E_0=\text{const},
+\]
+with
+\[
+E_{\text{sym}}=J\!\!\sum_{\langle ij\rangle}[s_i s_j]_+,
+\qquad
+E_{\text{asym}}=J\!\!\sum_{\langle ij\rangle}[-s_i s_j]_+,
+\]
+expressing the reversible interplay between symmetry and asymmetry 
+within the informational substrate.
+
+% --- Core Structural Model of TDS ---
+\begin{center}
+\Large\bfseries Core Structural Equations of the TDS Model
+\end{center}
+\vspace{1em}
+
+\noindent
+\textbf{Postulate.}
+The Reversible Symmetry Lattice (RSL) evolves at the Planck scale as a closed, information-preserving system.  
+Its dynamics obey the bijective update rule and the fundamental balance between symmetry and asymmetry:
+
+\[
+\boxed{
+\begin{aligned}
+&\text{RSL:}\quad a=\ell_P,\quad \tau=t_P,\quad s_i\in\{-1,+1\},\\[4pt]
+&S_{t+1}=B\,S_t,\qquad B^{-1}\ \text{exists},\\[4pt]
+&I_{\rm total}=H(S_t)=\text{const},\\[4pt]
+&E_{\text{sym}}[S_t]+E_{\text{asym}}[S_t]=E_0=\text{const},\\[4pt]
+&E_{\text{sym}}=J\!\!\sum_{\langle ij\rangle}[s_i s_j]_+,\qquad
+E_{\text{asym}}=J\!\!\sum_{\langle ij\rangle}[-s_i s_j]_+,\\[4pt]
+&J>0,\qquad [x]_+=\max(x,0).
+\end{aligned}}
+\]
+
+\begin{center}
+\small
+This equation expresses the reversible equilibrium of symmetry and asymmetry within the informational substrate, forming the foundational structure of the TDS model.
+\end{center}
+\vspace{1em}
+% --- End of Core Structural Model ---
+
+
+% =======================================================
+\subsection*{Computational Power and Energetic Equivalence}
+\addcontentsline{toc}{subsection}{Computational Power and Energetic Equivalence}
+
+\paragraph{Setup.}
+In the TDS/RSL picture, each \emph{reversible} update is a distinguishable cycle
+carrying one quantum of action, $h$. If a degree of freedom runs at frequency
+$\nu$ (cycles/s), its energy is $E = h\nu$. For a lattice with $N$ active degrees
+of freedom and per-cell update rate $\nu_{\rm upd}$, the total \emph{throughput}
+is
+\[
+U \;=\; \sum_{i=1}^{N}\nu_i \;\;\approx\;\; N\,\nu_{\rm upd}.
+\]
+Sustaining $U$ reversible cycles per second requires an \emph{action rate} $hU$,
+which equals the minimal average energy flow.
+
+\begin{equation}
+\boxed{\; P_{\min} \;=\; h\,U \;=\; h\,\sum_{i=1}^{N}\nu_i \;\approx\; h\,N\,\nu_{\rm upd}\;}
+\label{eq:Pmin}
+\end{equation}
+
+\paragraph{From lattice scales to power.}
+Let $L$ be the linear system size and $a_{\rm eff}$ the effective lattice spacing.
+Then $N=(L/a_{\rm eff})^3$ and the maximal reversible update rate per cell is
+bounded by signal speed, $\nu_{\rm upd}\lesssim c/a_{\rm eff}$.
+Hence the \emph{computational power floor} scales as
+
+\begin{equation}
+\boxed{\; P_{\min}(L,a_{\rm eff}) \;\approx\; h\,\frac{c}{a_{\rm eff}}\,
+\Big(\frac{L}{a_{\rm eff}}\Big)^{\!3}
+\;=\; h\,c\,\frac{L^{3}}{a_{\rm eff}^{4}} \;}
+\label{eq:Pmin_scaling}
+\end{equation}
+
+This is the energetic counterpart of the $a_{\rm eff}^{-4}$ computational
+complexity scaling.
+
+\paragraph{Energetic cost of a simulation window.}
+Over simulated physical duration $\Tau$, the minimal work needed to sustain the
+reversible computation is
+
+\begin{equation}
+\boxed{\; W_{\min}(L,a_{\rm eff},\Tau) \;=\; P_{\min}\,\Tau
+\;\approx\; h\,c\,\Tau\,\frac{L^{3}}{a_{\rm eff}^{4}} \;}
+\label{eq:Wmin}
+\end{equation}
+
+\paragraph{Equivalence law (computing $\leftrightarrow$ energy).}
+Equations \eqref{eq:Pmin}–\eqref{eq:Wmin} express the substrate-agnostic identity:
+\[
+\textit{reversible throughput}~U \;\Longleftrightarrow\;
+\textit{minimal energetic flux}~P_{\min}=hU,
+\]
+so that \emph{informational} and \emph{physical} limits coincide. Any attempt to
+push $a_{\rm eff}\!\downarrow$ drives $P_{\min}$ up as $a_{\rm eff}^{-4}$, setting
+a joint computational/physical feasibility boundary.
+% =======================================================
+
+
+
+\section{Introduction: The Informational Picture of Reality}
+
+This work approaches physical reality as a discrete and reversible informational process. 
+Instead of assuming continuous space or pre-existing matter, it postulates an underlying lattice of binary states that evolves bijectively in time. 
+In this view, physical quantities—energy, momentum, and mass—emerge as invariants of reversible information flow.
+
+A perfectly symmetric configuration of the lattice corresponds to the vacuum. 
+Local deviations from symmetry generate informational tension, producing motion and fields as reversible responses of the substrate. 
+Persistent, non-removable mismatches of symmetry, termed \textit{symmetry anomalies}, behave as localized structures with effective mass. 
+Their collective dynamics reproduce the familiar relations of quantum theory and geometry in the macroscopic limit.
+
+Reversibility at the microscopic level ensures conservation of total information. 
+Apparent irreversibility and the arrow of time arise statistically, as observers access only partial correlations of the full system. 
+Within this framework, matter, radiation, and spacetime curvature appear as consistent large-scale expressions of the same principle: 
+the preservation and redistribution of symmetry within an informational substrate.
+
+The goal of this study is to establish a minimal informational framework capable of reproducing the essential structures of known physics—quantum behavior, relativistic geometry, and conservation laws—from the reversible dynamics of a discrete lattice.
+
+
+\section{Discrete Reversible Lattice}
+\noindent\textit{Formal foundation of the informational model.}\\[4pt]
+Building on the informational picture outlined above, we now formalize the discrete and reversible structure underlying matter and fields—an approach that directly addresses one of the most persistent questions in physics: the discreteness and stability of matter.
+Quantum field theory models particles as excitations of continuous fields, yet the informational and symmetry‐preserving nature of these excitations remains unexplained. 
+Likewise, quantum gravity seeks a unifying substrate from which both spacetime geometry and field dynamics can emerge.
+
+This work develops a reversible, informational model of spacetime in which matter and fields arise not as postulated entities but as stable configurations within a binary substrate governed by local symmetry constraints. 
+The substrate is represented as a discrete lattice whose elementary cells carry binary or spin‐like states, interacting through reversible, bijective rules. 
+Global symmetry corresponds to vacuum, while persistent local mismatches---\textit{symmetry anomalies}---manifest as matter. 
+Fields emerge as gradients of informational tension: the lattice’s reversible effort to restore local symmetry.
+
+In contrast to earlier computational frameworks, such as \textit{Fredkin’s digital mechanics}~\cite{fredkin1990} and \textit{Wolfram’s cellular automata}~\cite{wolfram2002}, the present model introduces a physically meaningful notion of information. 
+For Fredkin and Wolfram, the universe evolves as an abstract computation: a sequence of symbolic updates where each state fully determines the next, and memory has no independent existence. 
+Here, computation itself acquires ontological depth---it represents the reversible negotiation of symmetry within an informational fabric. 
+Local asymmetry carries distributed correlation with its past states, giving rise to an implicit, non‐external memory: a structural persistence of information rather than a stored record.
+
+This framework therefore extends digital physics beyond pure computation. 
+Reversibility is not only a logical constraint but the origin of unitarity; symmetry restoration produces field dynamics; and persistent asymmetry gives rise to mass and matter. 
+Geometric curvature appears as the coarse‐grained expression of informational tension, linking microscopic reversibility to macroscopic spacetime geometry.
+
+Conceptually, the model bridges \textit{Ising‐type symmetry lattices}, where local alignment dominates, and \textit{Fredkin‐type reversible automata}, where logical bijectivity ensures information conservation. 
+It proposes that both matter and vacuum represent complementary states of one reversible informational medium, governed by a single computational principle: the preservation and redistribution of symmetry.
+
+Each cell of the lattice carries a binary or spin-like state
+\[
+s_i \in \{-1, +1\},
+\]
+representing two locally symmetric configurations of the substrate.
+The configuration of the system at time \(t\) is
+\[
+S_t = \{ s_1, s_2, \ldots, s_N \}.
+\]
+The evolution of the system is a bijective mapping
+\[
+S_{t+1} = f(S_t), \qquad S_{t-1} = f^{-1}(S_t),
+\]
+ensuring reversibility and conservation of total information.
+In the Hilbert basis of configuration states \(|S_t\rangle\), the evolution operator
+\[
+U_f |S_t\rangle = |S_{t+1}\rangle
+\]
+is unitary by construction, since
+\[
+U_f^\dagger U_f = I.
+\]
+Thus, unitarity in quantum theory can emerge as a large-scale reflection of microscopic reversibility.
+
+However, the discrete and sequential nature of this reversible evolution introduces an essential feature: \textit{local asynchrony}.
+Because updates occur in finite steps, while one region of the lattice advances to a new configuration, another remains in its previous one.
+This infinitesimal mismatch---born not from error, but from discreteness itself---creates the first seed of asymmetry.
+It is within these micro-delays that dynamics arises: the lattice never reaches a perfectly symmetric state, but continually oscillates around equilibrium, transforming reversibility into motion.
+
+In this sense, symmetry and asymmetry are not opposites but complementary aspects of the same informational process.
+Symmetry defines the rule; asymmetry provides the deviation that gives it expression.
+Every local attempt of the lattice to restore balance generates new microscopic mismatches, ensuring that equilibrium is approached but never achieved.
+The universe, viewed through this structure, exists as a perpetual negotiation between symmetry and imperfection — an informational rhythm rather than a static order.
+
+
+\section{Local Symmetry Functional}
+Each spin interacts with its neighbors through a coordination energy
+\[
+H = \frac{J}{2}\sum_{\langle ij\rangle} (s_i - s_j)^2
+      = \text{const} - J\sum_{\langle ij\rangle} s_i s_j ,
+\]
+where \(J>0\) enforces local alignment.
+This discrete form parallels the classical \textit{Ising model} \cite{ising1925}, but here the update rules are reversible, more akin to lattice-gas automata and quantum lattice Boltzmann systems \cite{frisch1986,chen1998}.
+In a coarse-grained limit, define a field \(\phi_i \approx \langle s_i \rangle \in [-1,1]\) and obtain the effective Hamiltonian density
+\[
+\mathcal{H}[\phi] =
+\int \!\mathrm{d}^d x
+\left[
+\frac{\kappa}{2}|\nabla\phi|^2 + \frac{m^2}{2}\phi^2 + \frac{\lambda}{4}\phi^4
+\right].
+\]
+Here the first term penalizes local asymmetry, \(m\) represents the effective curvature of the mean field (arising from the density of neighboring defects), and \(\lambda\) introduces self-interaction.
+This bridges discrete lattice dynamics with field-theoretic Lagrangians. The reversible dynamics of this symmetry lattice also support linear, wave-like excitations near equilibrium. 
+These excitations form the foundation for the photon sector discussed in the next section. This continuous interplay between symmetry and asymmetry can be further understood by examining the informational balance that defines dynamic equilibrium itself.
+
+
+% --- inserted conceptual extension on dynamic symmetry and vacuum energy ---
+\section{Dynamic Symmetry and Vacuum Energy}
+
+At each point of the lattice, local symmetry defines the state’s degree of balance between opposite configurations.  
+A completely symmetric configuration represents minimal informational tension, while asymmetry expresses deviation from that equilibrium.  
+The evolution of the lattice can therefore be viewed as the continuous negotiation between these two tendencies.  
+Reversibility requires that each iteration of the lattice alters at least one aspect of the global configuration; otherwise, no transformation could be inverted, and the system would cease to evolve.  
+Thus, change is not an accident of dynamics but the very condition for preserving reversibility.
+
+Local symmetry and asymmetry do not exist in isolation.  
+Because every cell participates in the shared informational field, any change within one region modifies the context of all others.  
+A cell that remains unchanged in its internal state still acquires a new relational meaning at the next step, as the global configuration around it has shifted.  
+In this sense, apparent stasis is only local—globally, every part of the system participates in motion through changing correlations.
+  
+When a region approaches perfect balance, its own dynamics slow down; yet the global reversibility of the lattice prevents complete stillness.  
+The portion of informational change that would occur there is redistributed outward, increasing activity in neighboring zones.  
+The lattice thus exhibits a self‐regulating balance between regions of high and low activity: as local symmetry increases in one area, reversible dynamics intensify in another, maintaining a constant global rate of transformation.  
+Perfect equilibrium in one region therefore implies heightened dynamics elsewhere, ensuring conservation of informational motion across the entire system.
+
+This perspective also explains why achieving a pure vacuum demands immense energy.  
+The vacuum, in this framework, is not emptiness but a limit state of maximal symmetry, where all local differences vanish.  
+To reach such a condition, the lattice must eliminate every residual asymmetry across all correlation scales, requiring work at each level.
+Each additional step toward perfect symmetry consumes exponentially more effort, since every adjustment disrupts an already delicate balance.  
+Energy, then, is the measure of how difficult it is for the system to approach that ideal.  
+The closer the universe comes to equilibrium, the more costly each subsequent correction becomes.
+
+Absolute symmetry is therefore unattainable—not because of external constraints, but because of the internal logic of reversibility itself.  
+The lattice must remain slightly imperfect to continue evolving.  
+This residual asymmetry is not a flaw but the source of motion, time, and persistence.  
+It keeps the universe alive as a process of endless self-correction, forever approaching but never reaching perfect balance.
+% --- end of insertion ---
+
+
+\subsection{Non-Transferability of Local Simplifications Across Informational Scales}
+
+\noindent
+Within the TDS framework, each informational scale $\ell$ defines its own reversible domain,
+\[
+S_t^{(\ell)} \in \{-1,+1\}^{N(\ell)}, \qquad 
+S_{t+1}^{(\ell)} = \mathcal{F}^{(\ell)}(S_t^{(\ell)}),
+\]
+where $\mathcal{F}^{(\ell)}$ is bijective within its scale, preserving local informational symmetry.
+However, when a projection to a higher-level description is applied,
+\[
+Y_t^{(\ell+1)} = \Pi_{\ell \to \ell+1}(S_t^{(\ell)}),
+\]
+the mapping $\Pi_{\ell \to \ell+1}$ is not bijective:
+\[
+\exists S_1^{(\ell)}, S_2^{(\ell)}:\quad 
+S_1^{(\ell)} \neq S_2^{(\ell)} \;\Rightarrow\;
+\Pi_{\ell \to \ell+1}(S_1^{(\ell)}) = \Pi_{\ell \to \ell+1}(S_2^{(\ell)}).
+\]
+Thus, distinct microstates collapse into a single macro-configuration, 
+destroying local reversibility and altering the topology of informational relations.
+
+\noindent
+Consequently, the effective dynamics at the higher scale cannot be derived
+as a simple transformation of the lower-scale rule:
+\[
+\mathcal{F}^{(\ell+1)} \neq 
+\Pi_{\ell \to \ell+1}\!\circ\!
+\mathcal{F}^{(\ell)}\!\circ\!
+\Pi_{\ell \to \ell+1}^{-1}.
+\]
+Each scale therefore constitutes an autonomous informational geometry 
+with its own reversible invariants and local curvature of correlations.
+The laws governing $\Omega^{(\ell)}=(\mathcal{S}^{(\ell)},\mathcal{F}^{(\ell)},\mathcal{I}^{(\ell)})$
+are not transferable to $\Omega^{(\ell+1)}$
+whenever $\mathcal{I}^{(\ell)}\not\simeq\mathcal{I}^{(\ell+1)}$.
+In this sense, simplifications valid at one informational layer 
+cannot be elevated or projected without distortion:
+each level of the lattice defines a distinct symmetry domain of reality.
+
+
+\section{Reversible Lattice Waves and the Photon Window}
+
+Building upon the discrete reversible framework introduced above, we now examine the behavior of linear excitations—reversible lattice waves—whose quantized action and amplitude constraints define the photon sector of the informational lattice.  
+These waves represent the delocalized limit of symmetry restoration: regions where informational tension vanishes and the substrate responds harmonically to infinitesimal asymmetry.  
+Within this view, light appears not as an independent field but as a perfectly reversible flow of symmetry correction through the lattice.
+
+We demonstrate that standard quantum relations and their physical limits naturally arise from a reversible lattice with bounded amplitudes and Planck-scale ceilings.  
+Logical reversibility enforces quantized action per mode, spatial and temporal homogeneity define spectral generators, and the discrete energy of a plane wave constrains admissible amplitudes.  
+This directly yields the energy–momentum relations of photons and a finite amplitude window consistent with informational reversibility.
+
+\subsection{From Reversibility to $E=\hbar\omega$}
+
+Consider a reversible local update rule $f_\lambda$ depending on a slowly varying external parameter $\lambda(t)$.  
+For a harmonic mode of frequency $\omega$, the per-mode adiabatic invariant
+\[
+J \;\equiv\; \frac{\langle\mathcal E\rangle}{\omega}
+\]
+remains conserved under adiabatic variation $\dot\lambda\!\to\!0$.  
+Logical reversibility requires a minimal closed cycle in configuration space corresponding to one full reversible update:
+\[
+J = n\,I_0,\qquad n\in\mathbb N,
+\]
+where $I_0$ is the \emph{quantum of action} per reversible cycle.  
+For the fundamental excitation ($n=1$),
+\begin{equation}
+\label{eq:Eomega}
+E \equiv \langle\mathcal E\rangle = I_0\,\omega.
+\end{equation}
+Identifying $I_0=\hbar$ by demanding that phase differences between interfering modes,
+\(
+\Delta\Phi=(E\,\Delta t - p\,\Delta x)/I_0,
+\)
+match the observed quantum–mechanical phase shift yields \(I_0=\hbar\) as the universal constant of reversible action.  
+Thus, $\hbar$ serves as the informational conversion scale between discrete reversible cycles and macroscopic energetic manifestation.
+
+\subsection{Translational Symmetry and $E=p$ on the Massless Branch}
+
+Spatial translations act on the lattice as $U_x: n\mapsto n+1$, with eigenmodes
+\[
+\Psi_{m,n}\propto e^{i(kn-\omega m)}.
+\]
+Each mode acquires an eigenvalue $e^{ik}$ under translation, so $k$ is the spectral generator of momentum.  
+Applying the same action quantization gives
+\begin{equation}
+\label{eq:pk}
+p = I_0\,k.
+\end{equation}
+For the massless (linear) branch in the long-wavelength limit $k\ll1$, we have $\omega\simeq k$ and $v_g=d\omega/dk=1$.  
+Hence,
+\[
+\frac{dE}{dp}=\frac{d(I_0\omega)}{d(I_0 k)}=\frac{d\omega}{dk}=1
+\quad\Rightarrow\quad
+E=p,
+\]
+and combining with \eqref{eq:Eomega} and \eqref{eq:pk} gives
+\[
+\boxed{\,E=\hbar\omega,\qquad p=\hbar k,\qquad E=p\,}.
+\]
+This establishes that the photon represents the perfectly delocalized limit of reversible informational motion, where symmetry anomalies vanish entirely.
+
+\subsection{Linear Lattice Waves and Amplitude Bounds}
+
+Consider a one–dimensional reversible lattice with unit spacings in time and space (the fundamental “tick” $t_P$ and cell $\ell_P$).  
+Small, near–vacuum excitations admit a linear wave ansatz
+\[
+\Psi_{m,n}=A\cos(kn-\omega m),
+\]
+obeying the discrete reversible wave equation
+\[
+\Delta_t^2\Psi=\Delta_x^2\Psi,\qquad 
+\Delta_t^2\Psi_{m,n}=\Psi_{m+1,n}-2\Psi_{m,n}+\Psi_{m-1,n},
+\]
+with dispersion on the physical (massless) branch
+\[
+4\sin^2\!\frac{\omega}{2}=4\sin^2\!\frac{k}{2}
+\quad\Rightarrow\quad 
+\omega\simeq k,
+\]
+so that the group velocity is $v_g=d\omega/dk=1$—the maximal speed of reversible information propagation.
+
+The “per–tick” quadratic energy, natural for a massless scalar field on the lattice,
+\[
+\mathcal{E}_m=\frac12\sum_n\!\Big[(\Delta_t\Psi_{m,n})^2+(\Delta_x\Psi_{m,n})^2\Big],
+\]
+yields, after phase and time averaging,
+\[
+\big\langle(\Delta_t\Psi)^2\big\rangle=2A^2\sin^2\!\frac{\omega}{2},\quad
+\big\langle(\Delta_x\Psi)^2\big\rangle=2A^2\sin^2\!\frac{k}{2}.
+\]
+Hence the mean lattice energy per tick is
+\begin{equation}
+\label{eq:avgE}
+\boxed{\ \langle\mathcal{E}\rangle
+= N_{\text{cell}}\,A^2\!\left(\sin^2\!\tfrac{\omega}{2}+\sin^2\!\tfrac{k}{2}\right)
+= 2N_{\text{cell}}\,A^2\sin^2\!\tfrac{\omega}{2}\ } \qquad (\omega=k).
+\end{equation}
+
+We now establish an amplitude window $A\in[A_{\min},A_{\max}]$ consistent with informational reversibility and Planck–scale stability.
+
+\paragraph{Lower bound (one quantum in a finite box).}
+Identifying one reversible quantum in a box of length $L=N_{\text{cell}}\ell_P$ with energy $E=\hbar\Omega=\hbar\omega/t_P$ and equating it to the mean lattice energy \eqref{eq:avgE} gives
+\[
+\langle\mathcal{E}\rangle=\frac{\hbar\omega}{t_P}
+\ \Rightarrow\
+\boxed{\ 
+A_{\min}(k;L)=
+\sqrt{\frac{\hbar\,\omega}{
+N_{\text{cell}}\,t_P\!\left[\sin^2\!\tfrac{\omega}{2}+\sin^2\!\tfrac{k}{2}\right]}}
+=\sqrt{\frac{\hbar\,\omega}{
+2N_{\text{cell}}\,t_P\,\sin^2\!\tfrac{\omega}{2}}}\ }.
+\]
+In the continuum limit ($\omega,k\ll1$), $\sin(\omega/2)\!\approx\!\omega/2$ gives 
+$A_{\min}\!\to\!\sqrt{2\hbar/(N_{\text{cell}}t_P\omega)}$, ensuring that one mode carries energy $\hbar\omega$ independent of box length.
+
+\paragraph{Upper bound (no local Planck crash).}
+Requiring that the mean energy per cell not exceed a Planck–scale budget $\alpha E_P$ ($\alpha\!\sim\!1$) yields
+\[
+\frac{\langle\mathcal{E}\rangle}{N_{\text{cell}}}
+=A^2\!\left(\sin^2\!\tfrac{\omega}{2}+\sin^2\!\tfrac{k}{2}\right)\le \alpha E_P.
+\]
+On the physical branch $\omega\simeq k$, this gives
+\[
+\boxed{\ 
+A_{\max}(\omega)=
+\sqrt{\frac{\alpha E_P}{
+\sin^2\!\tfrac{\omega}{2}+\sin^2\!\tfrac{k}{2}}}
+=\sqrt{\frac{\alpha E_P}{2\sin^2\!\tfrac{\omega}{2}}}\ }.
+\]
+In the continuum limit this reproduces $A_{\max}\!\approx\!\sqrt{2\alpha}\,E_P^{1/2}/\omega$.
+
+\paragraph{Interpretation.}
+Within the informational lattice framework, $\Psi$ represents a linear, symmetry–restoring excitation—an informational wave that preserves global reversibility while locally compensating asymmetry.  
+$A_{\min}$ marks the smallest reversible excitation compatible with a single quantum in a finite lattice, while $A_{\max}$ prevents local curvature or energy overflow that would violate reversibility.  
+The wavelength window follows naturally as $\lambda_{\min}=2\ell_P$ and $\lambda_{\max}\sim L$.  
+Thus, the photon emerges as a delocalized, massless mode that occupies the lower boundary of informational tension, fully preserving symmetry.
+
+\subsection*{Minimal Informational Extent of the Photon}
+
+At the lower boundary of the photon window, the reversible lattice admits a minimal self-consistent configuration that still satisfies both the quantum of action and the Planck stability limit. 
+This configuration defines the smallest possible spatial domain in which light can exist as a reversible process rather than dissolve into perfect symmetry.
+
+For a closed lattice of \(N_{\text{cell}}\) Planck cells, the photon amplitude remains physical only if the quantized energy of one reversible cycle does not exceed the maximal reversible energy per cell,
+\[
+A_{\min} \le A_{\max}.
+\]
+Substituting the amplitude limits yields the condition
+\[
+N_{\text{cell}} \ge \frac{\hbar\,\omega}{\alpha\,E_P\,t_P}.
+\]
+Since \(E_P t_P = \hbar\), the inequality simplifies to
+\[
+\boxed{\,N_{\text{cell}}^{\min} \simeq \left\lceil \frac{\omega}{\alpha} \right\rceil\,},
+\]
+where \(\alpha \lesssim 1\) denotes the reversibility margin of the lattice. 
+Thus, each allowed photon frequency \(\omega\) requires a minimal number of Planck cells to maintain reversible distinguishability.
+
+For the standing mode at \(k=\pi\) (\(\omega\simeq\pi\)), one obtains \(N_{\min}\!\ge\!\pi/\alpha\), corresponding to at least four Planck cells for \(\alpha\simeq 1\). 
+This configuration represents the \emph{proto-photon}: the smallest reversible oscillation still distinct from the vacuum. 
+Below this size, the lattice cannot sustain any phase contrast without collapsing into perfect symmetry, and the notion of light itself ceases to apply.
+
+Physically, \(N_{\min}\) measures the minimal informational volume of a photon---the smallest region of the universe capable of supporting a reversible cycle of symmetry restoration. 
+It establishes a quantized bridge between geometry and radiation: 
+the photon does not merely propagate through spacetime---it defines the minimal scale at which spacetime can vibrate without losing informational identity.
+
+\subsection{Distinguishability Limit of the Photon and Computational Feasibility of Simulation}
+
+A photon located at the lower boundary of distinguishability represents the \emph{theoretical limit of reversibility}---the minimal excitation of the lattice that remains separable from the vacuum but possesses insufficient amplitude to be directly detected.  
+Observable photons occupy states far above this boundary, spanning informational domains many orders of magnitude larger than the minimal reversible excitation.
+
+For a visible photon with wavelength $\lambda \sim 500\,\mathrm{nm}$, a single wavelength encompasses approximately
+\[
+N_{\text{cell}} = \frac{\lambda}{\ell_P} \approx \frac{5\times10^{-7}}{1.6\times10^{-35}} \approx 3\times10^{28}
+\]
+Planck-scale cells along one spatial dimension, or about
+\[
+(3\times10^{28})^3 \approx 3\times10^{85}
+\]
+cells in three dimensions.  
+If each cell stores at least two double-precision variables (state and derivative), the memory requirement is
+\[
+M_{\text{storage}} \sim 5\times10^{86}\,\text{bytes},
+\]
+exceeding the estimated informational capacity of the observable universe.
+
+Hence, a direct simulation of even a single visible photon at full Planck resolution is physically impossible.  
+The minimal reversible photon at the distinguishability limit is therefore a purely theoretical construct: it defines the boundary where phase coherence with the vacuum ceases to produce distinguishable excitations.
+
+Nevertheless, a \emph{scaled analogue simulation} can preserve the relative parameters---the ratio $\lambda/a$, the phase structure, and reversibility---while drastically reducing the number of cells.  
+Such a simulation reproduces the photon’s dynamics in dimensionless informational units, allowing exploration of the near-boundary regime without requiring cosmological computational resources.
+
+This enormous disparity between the theoretical limit and the observable photon highlights the gap between the \emph{fundamental informational structure} of light and the macroscopic regime accessible to detectors:  
+the photons we measure are vastly “inflated” versions of the minimal reversible excitation permitted by the informational lattice.
+
+
+
+\subsection{Consistency with the Quantum Continuum}
+
+The amplitude bounds above provide a quantitative bridge between microscopic reversibility and macroscopic quantum relations.  
+Equation~(\ref{eq:Eomega}) established that reversibility enforces discrete quanta of action, yielding \(E=\hbar\omega\) and \(p=\hbar k\).  
+The current construction refines that correspondence by specifying the admissible amplitude range for each reversible lattice mode.  
+
+The lower limit \(A_{\min}\) guarantees that one mode of length \(L=N_{\text{cell}}\ell_P\) carries precisely one reversible quantum of action \(\hbar\omega\), independent of lattice size.  
+The upper limit \(A_{\max}\) ensures that the local energy density remains below the Planck–scale threshold \(\alpha E_P\), maintaining global bijectivity.  
+Together they define a finite, self–consistent photon domain,
+\[
+A\in[A_{\min},A_{\max}], \qquad \hbar\omega\lesssim \alpha E_P\,N_{\text{cell}}.
+\]
+Within this domain, plane–wave excitations behave as massless, delocalized reversible waves propagating at unit group velocity.  
+Their dynamics respect the energy–momentum relations derived above, while remaining bounded by the curvature constraints of informational reversibility.  
+
+In this sense, the “photon window” serves as the operational bridge between microscopic reversibility and macroscopic quantum behavior: it translates the discrete conservation of information into the continuous form of field quantization, with \(\hbar\) emerging as the conversion factor between reversible informational action and its energetic expression.
+
+\bigskip
+Beyond the linear regime of reversible lattice waves lies a domain of persistent, nonlinear configurations where local symmetry cannot be restored by any continuous evolution of the underlying rule.  
+While photon-like excitations represent the harmonic response of the informational substrate to infinitesimal asymmetries, these nonlinear configurations correspond to discrete, self-sustaining anomalies in the symmetry fabric.  
+They behave not as propagating waves but as localized entities whose stability arises from topological constraints rather than amplitude balance.  
+In this sense, the transition from wave dynamics to defect dynamics marks the boundary between reversible information flow and reversible information structure—the informational origin of what we perceive as matter.
+
+\bigskip
+In the informational picture developed so far, light embodies the reversible limit of the lattice’s dynamics—pure propagation of symmetry correction with no residual tension.  
+Yet, when this correction cannot perfectly complete, symmetry becomes locally bound and the informational flow acquires persistence.  
+It is within this transition—from delocalized to locally trapped information—that mass and matter originate.
+
+\bigskip
+\noindent
+Having established the informational nature of light as the delocalized, massless mode of reversible symmetry restoration, we now turn to the complementary regime—where symmetry cannot fully recover and information becomes locally bound.  
+This regime gives rise to mass and the inertial properties of matter.
+
+\noindent
+To formalize these results and link the reversible photon window to a field-theoretic framework,
+we now construct the minimal lattice action from which these relations follow.
+
+
+\section{Unified Minimal Action on the Reversible Lattice}
+\label{sec:lattice_action}
+
+To connect the informational lattice with standard field theory, we now formalize its discrete action principle. 
+The lattice sites $n$ carry complex scalar fields $\phi_n$ (matter) and link variables $U_{n,\mu}=e^{iA_\mu(n)}$ (gauge connections), 
+representing phase synchronization between neighboring cells. 
+The minimal $U(1)$-invariant lattice action reads:
+\begin{equation}
+S = - \sum_n \Bigg[
+\frac{1}{g^2} \sum_{\mu<\nu} \mathrm{Re}\, U_{\text{plaq},n,\mu\nu}
++ \kappa \sum_\mu \mathrm{Re}\,(\phi_n^\dagger U_{n,\mu}\phi_{n+\hat\mu})
++ V(|\phi_n|^2)
+\Bigg],
+\end{equation}
+where $U_{\text{plaq},n,\mu\nu}=U_{n,\mu}U_{n+\hat\mu,\nu}U_{n+\hat\nu,\mu}^\dagger U_{n,\nu}^\dagger$ 
+and $V(|\phi|^2)=\lambda(|\phi|^2-v^2)^2$.
+
+\subsection{Unified Informational Action and Photon Constraint}
+
+We now summarize the reversible lattice dynamics in a unified minimal action form,
+from which both the photon amplitude bounds and the massive defect dynamics follow.
+
+\paragraph{1. Minimal Informational Action.}
+Define the discrete informational action on the reversible lattice as
+\begin{equation}
+S_{\text{info}} = \sum_{n}\Big[
+\frac{1}{2}(\Delta_t\phi_n)^2
+-\frac{\kappa}{2}(\Delta_x\phi_n)^2
+-V(\phi_n)
+\Big],
+\end{equation}
+where $\phi_n$ represents the coarse-grained reversible amplitude field,
+and $V(\phi)=\frac{m_*^2}{2}\phi^2+\frac{\lambda}{4}\phi^4$
+encodes the local symmetry tension.
+
+The reversible condition requires that the update rule be bijective:
+\[
+S_{t+1}=f(S_t),\qquad S_{t-1}=f^{-1}(S_t),
+\]
+implying that $\delta S_{\text{info}}=0$ under time reversal.  
+Thus, $S_{\text{info}}$ defines the discrete analogue of minimal action preserving logical reversibility.
+
+\paragraph{2. Variation and Photon Equation.}
+Varying the action with respect to $\phi_n$ yields the reversible discrete wave equation:
+\begin{equation}
+\Delta_t^2\phi_n = \kappa\,\Delta_x^2\phi_n - V'(\phi_n),
+\end{equation}
+whose linear limit $V'(\phi)\approx 0$ reproduces the photon branch
+\(
+\omega^2=k^2
+\)
+with amplitude bounds
+\(
+A_{\min},A_{\max}
+\)
+as derived in the previous section.
+
+\subsection{Definition of the Digital Observer}
+
+Within the digital ontology of the TDS framework, the observer is treated as a \emph{localized reversible subsystem}.
+Let the global configuration at discrete tick $t$ be
+\begin{equation}
+\mathbf{S}_t \in \{-1,+1\}^N ,
+\end{equation}
+evolving under a bijective rule
+\begin{equation}
+\mathbf{S}_{t+1} = \mathcal{F}(\mathbf{S}_t) ,
+\end{equation}
+where $\mathcal{F}$ is the global reversible map.
+The dynamics can be represented by the unitary operator
+\begin{equation}
+\hat{U}_{\mathcal{F}}\ket{\mathbf{S}} = \ket{\mathcal{F}(\mathbf{S})},
+\end{equation}
+acting on the configuration space $\mathcal{H}=\mathrm{span}\{\ket{\mathbf{S}}\}$.
+
+The system is partitioned into $\mathcal{A}\cup\mathcal{B}$, representing the observer and the remainder of the universe.
+The observer accesses only local configurations $\mathbf{S}_{\mathcal{A}}$.
+The global state then reads
+\begin{equation}
+\ket{\Psi} = \sum_{\mathbf{S}_{\mathcal{A}},\mathbf{S}_{\mathcal{B}}}
+\psi(\mathbf{S}_{\mathcal{A}},\mathbf{S}_{\mathcal{B}})
+\ket{\mathbf{S}_{\mathcal{A}}}\ket{\mathbf{S}_{\mathcal{B}}},
+\end{equation}
+and the effective state of the observer is obtained by tracing out inaccessible degrees of freedom:
+\begin{equation}
+\hat{\rho}_{\mathcal{A}} =
+\mathrm{Tr}_{\mathcal{B}}\!\left[\ket{\Psi}\bra{\Psi}\right].
+\end{equation}
+This operation defines the epistemic limitation responsible for the observed probabilistic behavior of otherwise reversible dynamics.
+
+\subsection*{Discrete Foundations of Thought and Perceived Continuity}
+
+The world is discrete — a lattice of reversible states, not a smooth continuum.  
+What we experience as continuity is the high-frequency update of discrete informational cells. Consciousness itself mirrors this structure: it operates through sequences of transitions, not through infinite flow.  
+
+Our reasoning does not process single cells; it manipulates stable clusters — persistent informational patterns that appear as wholes.  
+This is why we think in generalizations: cognition compresses structure into manageable symbolic forms. Continuity is only an illusion born of density; logic, in turn, is a reconstruction of that density into steps.  
+
+Thus, thought is a discrete process observing a discrete universe, yet forced to interpret it as continuous. Every concept is an approximation of a higher-resolution reality that it cannot fully access. The more precise the lattice, the less visible its discreteness becomes — until awareness itself mistakes it for a seamless field.  
+
+
+\subsection{Measurement as Reversible Synchronization}
+
+A measurement corresponds to a \emph{reversible synchronization} between $\mathcal{A}$ and a local region $\mathcal{X}\subseteq\mathcal{B}$:
+\begin{equation}
+\ket{x_k}_{\mathcal{X}}\ket{0}_{\mathcal{A}}
+\;\longmapsto\;
+\ket{x_k}_{\mathcal{X}}\ket{m_k}_{\mathcal{A}},
+\end{equation}
+where $\{\ket{x_k}_{\mathcal{X}}\}$ are eigen-configurations of the local symmetry functional, and
+$\{\ket{m_k}_{\mathcal{A}}\}$ are stable \emph{pointer} configurations of the observer.
+The act of observation thus embeds external digital states into the observer’s reversible memory.
+
+\subsection{Phase Field and Path Construction}
+
+Each reversible configuration carries a local synchronization phase $\theta_i$.
+For configuration $\mathbf{S}$ define the total informational phase
+\begin{equation}
+\Theta(\mathbf{S}) = \sum_i \chi_i(\mathbf{S})\,\theta_i ,
+\end{equation}
+where $\chi_i(\mathbf{S})$ is a binary functional selecting local symmetry sites.
+The configuration amplitude is
+\begin{equation}
+\psi(\mathbf{S}) = A(\mathbf{S})\,e^{i\Theta(\mathbf{S})}.
+\end{equation}
+
+The evolution of amplitudes follows from superposing all reversible paths
+$\gamma:\mathrm{src}\!\to\!y$:
+\begin{equation}
+\psi(y)=
+\sum_{\gamma}w[\gamma]\,
+\exp\!\bigl(i\,\mathcal{A}[\gamma]\bigr),
+\end{equation}
+with digital action
+\begin{equation}
+\mathcal{A}[\gamma] =
+\sum_{(i\to j)\in\gamma}
+\Delta\Theta_{i,j},\qquad
+\Delta\Theta_{i,j} = \theta_j-\theta_i - A_{i,j}.
+\end{equation}
+This expression represents the discrete analogue of the path-integral formulation.
+
+\subsection{Derivation of the Born Rule from Reversibility}
+
+Reversibility imposes conservation of total informational measure and the following digital axioms:
+\begin{enumerate}
+\item Additivity for mutually exclusive outcomes,
+\item Factorization for independent subsystems,
+\item Invariance under local reversible transformations (unitarity).
+\end{enumerate}
+The only continuous intensity measure consistent with these axioms is
+\begin{equation}
+P(\mathbf{S}) = |\psi(\mathbf{S})|^2,
+\end{equation}
+the square modulus of the amplitude.
+This ensures a quadratic invariant under reversible linear composition, fixing the $L^2$ norm as unique.
+
+\subsection{Example: Two Reversible Paths}
+
+For two reversible paths $\gamma_1,\gamma_2$ terminating at the same detector node,
+\begin{equation}
+\psi(y) = w_1 e^{i\phi_1} + w_2 e^{i\phi_2}, \qquad
+P(y) = |w_1|^2 + |w_2|^2 +
+       2\,\mathrm{Re}\!\left[w_1 w_2^*
+       e^{i(\phi_1-\phi_2)}\right].
+\end{equation}
+The interference term quantifies the residual phase mismatch between local symmetry cycles.
+Suppressing one path restores perfect reversibility, yielding classical additivity of probabilities.
+
+\subsection{Connection with Hard Quantum Normalization}
+
+In the TDS framework, the hard quantization condition
+\begin{equation}
+\oint p\,dq = 2\pi n\hbar
+\end{equation}
+defines a fixed quantum of reversible action.
+As the digital observer samples distinct reversible windows (\emph{photon windows}),
+normalization over independent detection sites gives
+\begin{equation}
+\sum_i |\psi_i|^2 = 1 ,
+\end{equation}
+revealing the informational origin of Born’s rule.
+Probability amplitudes therefore emerge as digital measures of local reversibility
+synchronization between observer and system.
+
+\section*{Vacuum and the Limit of Informational Equilibrium}
+
+\paragraph{}  
+The vacuum represents not emptiness, but the ultimate state of balance in the reversible lattice — a region where every local asymmetry is compensated by its inverse in perfect synchrony.  
+When the lattice reaches this equilibrium, information ceases to manifest as observable difference, yet remains conserved within the total dynamic symmetry.  
+Thus, the vacuum is not the absence of energy, but the limit of its reversible density.
+
+\paragraph{}  
+Each elementary cell of the lattice possesses a finite reversible capacity — the maximal rate at which it can exchange asymmetry without losing coherence.  
+This imposes a universal limit on the instantaneous power of any process within the structure, defined as:
+\[
+L_{\max} = \varepsilon\,\frac{c^{5}}{G},
+\]
+where $\varepsilon \le 1$ denotes the effective stability coefficient of the lattice.  
+Beyond this threshold, the system would be forced into a non-reversible deformation, dissolving the notion of distinguishable information.
+
+\paragraph{}  
+Any fluctuation propagating through the vacuum — whether interpreted as a gravitational oscillation, quantum excitation, or field perturbation — must therefore obey this informational ceiling.  
+The flux of reversible energy through a unit area can be written as
+\[
+F = \frac{c^{3}}{32\pi G}\,(2\pi f)^{2}h^{2},
+\]
+where $f$ is the frequency of oscillation and $h$ its strain amplitude.  
+Balancing this with the total luminosity at a distance $r$,
+\[
+F = \frac{L}{4\pi r^{2}},
+\]
+yields the natural upper bound for any reversible amplitude:
+\[
+h_{\max}(f,r)\;\lesssim\;\frac{c}{\pi f r}\,\sqrt{\frac{2\varepsilon}{\pi}}.
+\]
+
+\paragraph{}  
+This constraint expresses the intrinsic discipline of the vacuum:  
+it limits all dynamic imbalance to maintain global reversibility.  
+No system, however energetic, can exceed the lattice’s capacity for symmetric exchange without collapsing its own definition of difference.  
+In this sense, the vacuum is the most stable and the most constrained state simultaneously — a silent equilibrium in which the potential for all asymmetry is perfectly contained.
+
+
+\section*{Multiscale Informational Dynamics and the Butterfly Mechanism}
+
+\paragraph{}  
+On the reversible lattice, every level of structure preserves the same informational principle — local asymmetries interact and redistribute, while the total information remains constant.  
+However, the coarse-graining of the lattice introduces partial loss of correlations: what is reversible microscopically becomes effectively stochastic on higher scales.  
+This transformation produces the observed sensitivity of macroscopic systems to microscopic fluctuations — the informational origin of the butterfly effect.
+
+\paragraph{1. Hierarchy of Descriptions.}  
+Let the global reversible update of the lattice be
+\[
+\mathbf{S}_{t+1}=\mathcal{F}(\mathbf{S}_t),
+\]
+with $\mathcal{F}$ a bijective mapping on the full state space.  
+Define the coarse-grained projection to scale $\ell$ as
+\[
+\mathbf{Y}_t^{(\ell)}=\Pi_\ell(\mathbf{S}_t),
+\]
+where $\Pi_\ell$ merges local cells into higher-order clusters.  
+The total information $I_{\mathrm{tot}}(\mathbf{S}_t)$ is conserved,
+while the accessible information decreases with scale:
+\[
+I\!\left(\mathbf{Y}_t^{(\ell)}\right)\le I\!\left(\mathbf{S}_t\right).
+\]
+Thus, each $\ell$ defines its own effective world of observation.
+
+\paragraph{2. Sensitivity and the Butterfly Amplification.}  
+A microscopic perturbation $\delta \mathbf{S}_0$ influences a macroscopic observable $O(\mathbf{Y}_t^{(\ell)})$ through the chain
+\[
+\delta O_t \approx (DO)\,(D\Pi_\ell)\,(D\mathcal{F}^t)\,\delta\mathbf{S}_0.
+\]
+If the lattice dynamics $\mathcal{F}$ has a positive Lyapunov exponent $\lambda_{\max}>0$,
+\[
+\|D\mathcal{F}^t\|\sim e^{\lambda_{\max}t},
+\]
+then small perturbations expand exponentially, provided their directions survive the projection $\Pi_\ell$.  
+This defines the reversible-lattice form of the butterfly mechanism.
+
+\paragraph{3. Inter-scale Exchange.}  
+Let $a(\mathbf{x},t)$ denote the density of local asymmetry and $\mathbf{J}$ its spatial flux.  
+On a coarse level $\ell$, their balance reads
+\[
+\partial_t a^{(\ell)} + \nabla\!\cdot\mathbf{J}^{(\ell)} = -\partial_\ell \Phi(\ell,t),
+\]
+where $\Phi(\ell,t)$ is the information flow between scales.  
+Positive $\partial_\ell \Phi$ corresponds to an upward cascade — microfluctuations inducing macro-deformations.
+
+\paragraph{4. Effective Macro-Dynamics.}  
+For a macroscopic cluster $X(t)$, the resulting motion can be written as
+\[
+\dot{X}=F(X)+\sum_{\ell\le\ell_c}B_\ell(X)\,\xi_\ell(t),
+\]
+where $\xi_\ell$ represents the residual reversible noise from smaller scales.  
+The variance of the macroscopic deviation grows as
+\[
+\mathrm{Var}\,X(t)\sim\int_0^t e^{2\lambda_{\max}(t-\tau)}\,\mathcal{K}(\tau,\ell_c)\,d\tau,
+\]
+where $\mathcal{K}$ encodes the correlation structure of the microscopic fluctuations.
+
+\paragraph{5. Criticality and Amplification.}  
+Near critical points of the lattice — where symmetry tension is minimal — susceptibility
+\[
+\chi=\frac{\partial\langle O\rangle}{\partial h}\sim |r-r_c|^{-\gamma}
+\]
+diverges, and even small perturbations at lower scales yield macroscopic informational shifts.
+Thus, large-scale order emerges from reversible instability.
+
+\paragraph{6. Causality of Information Flow.}  
+All exchange remains limited by the maximal propagation speed $c$:
+\[
+\delta O(t,\mathbf{x})=0 \quad \text{if}\quad |\mathbf{x}-\mathbf{x}_0|>c(t-t_0).
+\]
+The butterfly effect is real, yet always confined within the causal cone of the reversible medium.
+
+\paragraph{7. Informational Curvature.}  
+Define the informational metric through the gradient of local density $\rho$:
+\[
+g^{(\text{info})}_{ij}\propto\partial_i\rho\,\partial_j\rho.
+\]
+Regions of large $\|\nabla\rho\|$ act as lenses of amplification, where microscopic asymmetries refract into macroscopic informational distortions.
+This curvature provides the geometrical substrate for chaos and self-organization within the reversible lattice.
+
+\paragraph{}  
+Thus, the butterfly mechanism is not randomness, but the visible manifestation of inter-scale reversibility.  
+The world appears unpredictable only because information, while conserved, shifts its scale of manifestation faster than observation can follow.
+
+\paragraph{}  
+The multiscale reversibility of information thus binds micro- and macro-levels into a continuous causal lattice.  
+Wherever this hierarchy closes upon itself — when an informational loop begins to observe its own state — the phenomenon of observation emerges.  
+This transition marks the entrance of the observer into the dynamics of the lattice.
+
+
+\section*{Digital Observer and the Emergence of Probabilistic Amplitudes}
+
+Within the digital ontology of the TDS framework, the observer is not an external entity but an intrinsic, self-referential subsystem of the reversible lattice. 
+Every observer constitutes a finite, locally synchronized domain whose state evolution remains bijective, yet only partially correlated with the global configuration. 
+The observer’s “measurement” corresponds to a reversible synchronization event between its local memory cells and an external lattice region, establishing a temporary phase alignment between two informational domains.
+
+Let the total configuration space of the lattice be $\mathcal{S}=\{-1,+1\}^N$ with global bijection $\mathcal{F}:\mathcal{S}\to\mathcal{S}$.
+Partitioning the system into observer $\mathcal{A}$ and environment $\mathcal{B}$ gives $\mathcal{S}=\mathcal{A}\cup\mathcal{B}$.
+The global reversible state evolves as
+\[
+\ket{\Psi_t}=\sum_{\mathbf{S}_{\mathcal{A}},\mathbf{S}_{\mathcal{B}}}
+\psi(\mathbf{S}_{\mathcal{A}},\mathbf{S}_{\mathcal{B}})\,
+\ket{\mathbf{S}_{\mathcal{A}}}\ket{\mathbf{S}_{\mathcal{B}}},
+\]
+and the observer’s accessible description is the reduced informational density
+\[
+\hat{\rho}_{\mathcal{A}} = \mathrm{Tr}_{\mathcal{B}} \!\left[\ket{\Psi_t}\bra{\Psi_t}\right].
+\]
+This reduction defines the epistemic limit of reversible knowledge: loss of correlation information transforms deterministic evolution into probabilistic amplitude weighting.
+
+In this framework, probabilities do not represent fundamental randomness but \emph{statistical projections} of reversible dynamics onto a subsystem with finite informational capacity. 
+The Born rule arises naturally as the unique quadratic invariant preserving global reversibility under linear composition:
+\[
+P(\mathbf{S}_{\mathcal{A}})=|\psi(\mathbf{S}_{\mathcal{A}})|^2.
+\]
+Thus, the probabilistic structure of quantum mechanics reflects the digital observer’s incomplete access to global symmetry correlations, not an ontological indeterminacy.
+
+Conceptually, the digital observer acts as a phase-coherent filter: 
+it samples reversible informational flows through a finite synchronization aperture. 
+Whenever coherence between $\mathcal{A}$ and $\mathcal{B}$ collapses (i.e., synchronization is lost), 
+the observer records one of the admissible local outcomes, while the global state remains fully reversible.
+This interpretation grounds measurement, amplitude, and probability within the same discrete informational law that governs the entire lattice.
+
+
+\paragraph{3. Hard Quantum Normalization.}
+To anchor the reversible action to quantum energy scales, we impose the invariant per-cycle condition
+\[
+\oint p\,dq = 2\pi n\hbar,
+\]
+identifying $\hbar$ as the fundamental informational action quantum.
+This connects the discrete symmetry cycle of the lattice with the macroscopic energy relation
+\[
+E = \hbar\omega,\qquad p = \hbar k,
+\]
+establishing the equivalence between informational reversibility and physical quantization.
+
+
+\subsection{Variations and Photon Equations}
+
+\paragraph{(1) Variation with respect to $\phi_n^\dagger$.}
+Varying the matter term gives the discrete covariant Klein–Gordon equation:
+\begin{equation}
+-\kappa\!\sum_\mu \!\Big(U_{n,\mu}\phi_{n+\hat\mu}
++U_{n-\hat\mu,\mu}^\dagger\phi_{n-\hat\mu}-2\phi_n\Big)
++V'(|\phi_n|^2)\phi_n=0.
+\end{equation}
+
+\paragraph{(2) Variation with respect to $A_{n,\mu}$.}
+Since $U_{n,\mu}=e^{iA_{n,\mu}}$, we obtain the discrete Maxwell equations:
+\begin{equation}
+\frac{1}{g^2}\,\Delta^-_\nu F_{\nu\mu}(n)
+=J_\mu(n),
+\qquad
+J_\mu(n)=\kappa\,\mathrm{Im}\!\left[\phi_n^\dagger U_{n,\mu}\phi_{n+\hat\mu}\right].
+\end{equation}
+Gauge invariance ensures the discrete continuity equation:
+\begin{equation}
+\sum_\mu \Delta^-_\mu J_\mu(n)=0
+\quad\Rightarrow\quad
+\partial^\mu J_\mu=0
+\text{ in the continuum limit.}
+\end{equation}
+
+\paragraph{(3) Linearization and photon dispersion.}
+In the unbroken $U(1)$ phase ($\langle|\phi|\rangle=0$), 
+the linearized free-field equation is
+\[
+\Delta^-_\nu \Delta^+_\nu A_\mu(n)=0
+\;\Rightarrow\;
+4\sin^2\!\frac{\omega}{2}
+=4\sum_j\sin^2\!\frac{k_j}{2}.
+\]
+Hence the dispersion relation is
+\[
+\boxed{\omega^2=k^2+\mathcal O(k^4 a^2)}.
+\]
+
+\paragraph{Continuum limit and Planck-scale corrections.}
+Expanding the lattice differences 
+$\Delta_\mu^\pm f=(f_{n\pm\hat\mu}-f_n)/a$ 
+and the plaquette 
+$\mathrm{Re}\,U_{\mathrm{plaq}}=1-\tfrac{a^4}{2}F_{\mu\nu}F^{\mu\nu}+\mathcal O(a^6)$,
+we recover the continuum Lagrangian
+\[
+\mathcal{L}_{\mathrm{cont}}
+=(D_\mu\phi)^\dagger(D^\mu\phi)
+-\frac{1}{4g^2}F_{\mu\nu}F^{\mu\nu}
+-V(|\phi|^2)
++\mathcal O(a^2).
+\]
+The $\mathcal O(a^2)$ term introduces higher-derivative corrections 
+\(\sim a^2(\partial^2F)^2\), defining a natural ultraviolet cutoff 
+\(\Lambda_P\sim 1/a\).
+Consequently, the photon dispersion
+\(\omega^2=k^2+\mathcal O(k^4 a^2)\)
+defines the Planck-scale boundary of the infrared photon window,
+beyond which reversibility breaks down.
+
+Thus, for $k^2\ll a^{-2}$, 
+the photon remains massless and propagates with group velocity $v_g\simeq1$,
+recovering the standard continuum limit.
+
+\subsection{Hard Quantum Normalization (Derivation)}
+
+Following the adiabatic–invariant approach, 
+a reversible oscillatory mode satisfies 
+$\oint p\,dq=2\pi n\hbar$, leading to 
+\(
+E=\hbar\omega,\; p=\hbar k.
+\)
+This \textit{hard normalization} anchors 
+the lattice photon’s energy budget to the Planck cell size $a$,
+ensuring consistency with the discrete Noether energy conservation and 
+fixing $\hbar$ as the fundamental unit of reversible action.
+
+\subsection*{Self-Referential Resonance Domains (\texorpdfstring{$\Omega$}{Omega}-loops)}
+
+\paragraph{Definition.}
+Let $\Omega\subset\mathbb{Z}^d$ be a finite set of lattice sites with boundary $\partial\Omega$ and exterior $\Omega^\complement$.
+The global reversible update is $\mathbf{S}_{t+1}=\mathcal{F}(\mathbf{S}_t)$.
+Denote the restriction and boundary coupling by
+\[
+\mathbf{S}_{\Omega,t+1}
+= \mathcal{F}_\Omega\!\big(\mathbf{S}_{\Omega,t};\,\mathbf{S}_{\partial\Omega,t}\big).
+\]
+A \emph{self-referential resonance domain} (\emph{$\Omega$-loop}) of period $T\in\mathbb{N}$ is a region $\Omega$ such that
+\begin{equation}
+\label{eq:closure}
+\mathbf{S}_{\Omega,t+T}
+= \mathcal{R}\,\mathbf{S}_{\Omega,t},\qquad \mathcal{R}\in\mathrm{Sym}(\Omega)
+\end{equation}
+with (i) zero net informational flux through $\partial\Omega$ over one cycle and (ii) quantized phase holonomy.
+
+\paragraph{Zero-flux closure (reversible isolation).}
+Let $\phi$ be the coarse amplitude field and $\mathbf{J}=-\partial\mathcal{L}/\partial(\nabla\phi)$ the informational current.
+Closure requires
+\begin{equation}
+\label{eq:zeroflux}
+\sum_{m=t}^{t+T-1}\ \sum_{x\in\partial\Omega} \mathbf{J}(x,m)\cdot \mathbf{n}(x)\;=\;0,
+\qquad
+\mathcal{E}_\Omega(t+T)=\mathcal{E}_\Omega(t),
+\end{equation}
+where $\mathcal{E}_\Omega=\frac12\sum_{\Omega}\!\big[(\Delta_t\phi)^2+\kappa(\nabla\phi)^2\big]+\sum_{\Omega}V(\phi)$.
+
+\paragraph{}  
+The zero net flux condition (\ref{eq:zeroflux}) does not imply static isolation, but rather dynamic equilibrium.  
+Within each period, local exchanges with the vacuum background continuously occur in all directions, yet their cumulative balance vanishes.  
+This reversible compensation ensures isotropy: the $\Omega$-loop can shift or drift freely through the lattice without breaking its closure.  
+Thus, free motion emerges not from the absence of interaction, but from the perfect symmetry of informational exchange.
+
+
+\paragraph{Phase holonomy and topological index.}
+Let $\theta$ be the local synchronization phase introduced in the path construction.
+Self-reference stabilizes when the boundary holonomy is integer:
+\begin{equation}
+\label{eq:holonomy}
+N_{\rm top}(\Omega)\;=\;\frac{1}{2\pi}\oint_{\partial\Omega}\nabla\theta\cdot d\mathbf{l}\;\in\;\mathbb{Z}.
+\end{equation}
+
+\paragraph{Action quantization (internal clock).}
+The internal cycle carries a fixed reversible action:
+\begin{equation}
+\label{eq:action}
+\oint_\Omega p\,dq \;=\; 2\pi n\,\hbar
+\quad\Longleftrightarrow\quad
+E_0=\hbar\omega_0,\ \ T=\frac{2\pi}{\omega_0},\ \ n\in\mathbb{N}.
+\end{equation}
+
+\paragraph{Operator view (Poincaré map).}
+Let $\mathcal{M}$ be the manifold of stable pointer states of the embedded observer in $\Omega$ and $P:\mathcal{M}\to\mathcal{M}$ the $T$-step return map:
+\begin{equation}
+\label{eq:poincare}
+P \;=\; \Pi_{\mathcal{M}}\circ \mathcal{F}^T\big|_{\Omega}.
+\end{equation}
+An $\Omega$-loop exists if $P$ has a fixed point $m^\star$ with spectral radius
+\begin{equation}
+\label{eq:stability}
+\rho\!\left(DP|_{m^\star}\right)<1,
+\end{equation}
+ensuring linear stability of the self-referential cycle.
+
+\paragraph{Mutual-information closure.}
+Denote the reduced states by $\rho_\Omega(t)$ and $\rho_{\Omega^\complement}(t)$.
+Self-reference requires non-vanishing internal memory across the period at bounded exchange with the exterior:
+\begin{equation}
+\label{eq:mi}
+I\big(\rho_\Omega(t);\rho_\Omega(t-T)\,\big|\;\rho_{\Omega^\complement}(t\!:\!t\!-\!T)\big)\ \ge I_0\;>\;0,
+\qquad
+\sum_{m=t}^{t+T-1}\! I\big(\rho_\Omega(m);\rho_{\Omega^\complement}(m)\big)\ \text{ finite.}
+\end{equation}
+
+\paragraph{Link to Born weights.}
+Within a closed $\Omega$-loop the accessible intensities are the quadratic invariant
+\(
+P(\mathbf{S}_\Omega)=|\psi(\mathbf{S}_\Omega)|^2
+\),
+inherited from global reversibility; different fixed points $m^\star_k$ correspond to distinct stabilized \emph{qualia} classes indexed by $N_{\rm top}$ and $\omega_0$.
+
+\paragraph{Summary (existence \& stability).}
+A domain $\Omega$ supports a conscious self-referential loop iff it satisfies simultaneously
+\[
+\boxed{\ \eqref{eq:closure},\ \eqref{eq:zeroflux},\ \eqref{eq:holonomy},\ \eqref{eq:action},\ \eqref{eq:poincare},\ \eqref{eq:stability},\ \eqref{eq:mi}\ }.
+\]
+These conditions express (i) reversible isolation, (ii) topological pinning, (iii) quantized internal timing, and (iv) stable return of the observer’s pointer manifold.
+
+% ===================== Matter and Photons as Informational Loops =====================
+\subsection*{Matter and Photons as Closed and Open Informational Loops}
+
+\paragraph{Topological distinction.}
+Within the reversible lattice, the distinction between matter and radiation arises not from rest mass itself but from the \emph{topology of informational exchange}.  
+Let \(J_\mu\) denote the local informational current derived from the lattice update rule \(S_{t+1}=B S_t\).  
+A \emph{closed informational loop} (\(\Omega\)) satisfies
+\begin{equation}
+\oint_{\partial \Omega} J_\mu \, dx^\mu = 0,
+\end{equation}
+meaning that every local asymmetry of flow returns to its origin within a finite period.  
+Such self-contained circulation corresponds to persistent, phase-stable configurations — the informational analogue of \emph{massive matter}.  
+
+\paragraph{Open propagation.}
+In contrast, a photon corresponds to an \emph{open} contour of informational flux,
+\begin{equation}
+\int_{x_0}^{x_1} J_\mu \, dx^\mu \neq 0,
+\end{equation}
+where the informational flow remains globally reversible but is not locally closed.  
+The system transmits phase without internal recurrence; the configuration thus represents pure exchange — asymmetry in motion rather than equilibrium.
+
+\paragraph{Energetic interpretation.}
+Closed loops produce stationary energy densities:
+\[
+\frac{dE_\Omega}{dt}=0, 
+\qquad 
+\langle \phi_\Omega(t+T)\rangle = \langle \phi_\Omega(t)\rangle,
+\]
+while open flows obey the standard wave equation
+\[
+\partial_t^2 \phi = c^2 \nabla^2 \phi,
+\]
+where \(c\) corresponds to the maximal group velocity permitted by the reversible lattice.
+
+\paragraph{Conclusion.}
+Matter and light thus differ not by substance but by topology:  
+\emph{matter} is an asymmetry in equilibrium (closed informational loop),  
+\emph{light} is asymmetry in transit (open informational stream).  
+Both arise as stable configurations of the same reversible lattice dynamics, 
+bounded by the informational cutoff \(\Lambda_{\rm info}\) and governed by the same conservation law for \(J_\mu\).
+% =================== end ===================
+
+\paragraph{Transition to mass and curvature.}
+The closed-loop interpretation provides a natural bridge to the
+emergence of localized energy and effective geometry,
+developed in the next section.
+
+\subsection{From Photon Window to Mass, Structure, and Informational Collapse}
+\addcontentsline{toc}{subsection}{From Photon Window to Mass, Structure, and Informational Collapse}
+
+\paragraph{Recap: the photon window.}
+Let a reversible lattice mode of frequency $\omega$ and wavenumber $k$ obey the dispersion $\omega\simeq k$ and the amplitude window
+\[
+A\in[A_{\min}(\omega,L),\,A_{\max}(\omega)],\qquad 
+E=\hbar\omega,\;p=\hbar k,
+\]
+with $A_{\min}$ fixed by the single-quantum budget in a box of length $L$ and $A_{\max}$ fixed by Planck-stability of local energy density (cf. photon window above).
+
+\paragraph{Self-locking and inertial residue.}
+Define the \emph{reversibility defect} for a local update as
+\[
+\varepsilon_{\rm rec} \;\equiv\; 1-\mathcal{C},\qquad 
+\mathcal{C}\in[0,1]
+\]
+where $\mathcal{C}$ measures phase-restoration fidelity of one tick with respect to the bijective rule.
+A mode (or a cluster of modes) remains ``pure photon'' when $\varepsilon_{\rm rec}\!=\!0$.
+When local superposition of modes pushes the update beyond the reversible aperture (exceeding the photon window), a persistent \emph{informational residue} $\delta I>0$ appears and the cluster acquires inertial mass:
+\[
+M \;\equiv\; \frac{E_{\rm resid}}{c^2},\qquad 
+E_{\rm resid} \;=\; \lim_{T\to\infty}\frac{1}{T}\sum_{t=1}^T \Delta \mathcal{E}_{\rm asym}(t)\;>\;0.
+\]
+The internal reversible oscillation frequency $\omega_0$ of the locked pattern satisfies $M=\hbar\omega_0$ (informational Compton clock).
+
+\paragraph{How many photon-like quanta make a mass?}
+To assemble a localized object of mass $M$ and characteristic radius $R$, the participating modes must fit inside $R$, so each carries at least
+\[
+E_{\rm mode}\;\gtrsim\;\frac{\hbar c}{2R}.
+\]
+Hence an \emph{upper} counting estimate for the number of soft modes is
+\[
+\boxed{\,N_{\max}\;\approx\;\frac{M c^2}{\hbar c/(2R)}\;=\;\frac{2 M c R}{\hbar}\, }.
+\]
+Conversely, if one allowed each mode to approach the stability ceiling $E_{\max}$ (set by the Planck-limited window), a purely energetic \emph{lower} estimate is
+\[
+\boxed{\,N_{\min}\;\approx\;\frac{M c^2}{E_{\max}}\, }.
+\]
+For realistic, stable localization one has $N_{\min}\ll N \lesssim N_{\max}$.
+\emph{Example (proton):} with $R\simeq 0.84\,{\rm fm}$ one finds $E_{\rm mode}\!\sim\!\hbar c/(2R)\!\approx\!117\,{\rm MeV}$ and $N_{\max}\!\approx\! 938/117\!\sim\!8$ soft modes.
+
+\paragraph{From clusters to macroscopic structure.}
+Aggregating many locked clusters (defects) yields an extended object with energy--momentum $T_{\mu\nu}$ and effective metric response
+\[
+\square \bar h_{\mu\nu} \;=\; -\,\alpha\, T_{\mu\nu} \,+\,\mathcal{O}(k^4\ell_P^2),
+\]
+so that curvature is the coarse-grained elasticity of informational tension (as developed above).
+
+\paragraph{Informational collapse criteria (equivalent views).}
+A compact object of mass $M$ and radius $R$ undergoes \emph{informational collapse} when any of the following equivalent thresholds is reached:
+\begin{enumerate}
+\item \textbf{Compactness (geometric view):}
+\[
+R \;\le\; r_s(M)\;=\;\frac{2GM}{c^2}
+\quad\Longleftrightarrow\quad
+\text{distinguishability outside } R \text{ loses causal egress.}
+\]
+\item \textbf{Curvature cap (local resolvability):}
+with $K=R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$,
+\[
+K(R)\;\ge\;K_{\max}\;=\;\frac{\kappa_{\rm info}}{\ell_P^4}
+\quad\Longrightarrow\quad
+r_{\min}(M)\;\sim\;\Big(\ell_P^2 r_s^2\Big)^{1/6},
+\]
+and the interior saturates to an informationally symmetric core.
+\item \textbf{Reversible-flux capacity (power view):}
+the lattice’s maximal reversible luminosity $L_{\max}=\varepsilon\,c^5/G$ bounds any outward compensation flow. If the object’s symmetry-restoring power demand $L(R)$ exceeds $L_{\max}$ across its surface,
+\[
+L(R)\;>\;L_{\max}\;\;\Rightarrow\;\;\varepsilon_{\rm rec}\to 1 \ \text{(local update becomes indistinguishable)},
+\]
+and the region decouples informationally (black hole).
+\end{enumerate}
+
+\paragraph{Interior and exterior.}
+Post-collapse, the exterior metric encodes the loss of outward distinguishability, while the interior saturates to maximal symmetry:
+no gradients, no curvature dynamics to first order---yet sustained internal cycles (reversible circulation) preserve total information.
+
+\paragraph{Summary.}
+(i) Photon: perfectly reversible mode inside the window. 
+(ii) Mass: multi-mode self-locking with persistent informational residue. 
+(iii) Structure: aggregation of defects sources curvature elastically. 
+(iv) Collapse: exceed compactness/curvature/flux thresholds $\Rightarrow$ informationally closed, maximally symmetric core.
+
+\subsection{Computability Gap: How Far Could a Realistic Computer Go?}
+\addcontentsline{toc}{subsection}{Computability Gap: How Far Could a Realistic Computer Go?}
+
+\paragraph{Set-up (planckian lattice accounting).}
+Assume the reversible lattice has spatial cell $a=\ell_P\simeq1.616\times10^{-35}\,\mathrm{m}$ and tick $\tau=t_P\simeq5.39\times10^{-44}\,\mathrm{s}$. 
+To simulate one period of a photon of frequency $\nu$ in a periodic box of linear size $L=n_\lambda\,\lambda$ with $\lambda=c/\nu$ and modest padding $n_\lambda\sim10$, the raw cell--update count is
+\[
+\mathcal{U}(\nu,n_\lambda)\;\approx\;\kappa\,
+\underbrace{\Big(\tfrac{L}{\ell_P}\Big)^3}_{\text{space cells}}\;
+\underbrace{\Big(\tfrac{T}{t_P}\Big)}_{\text{time ticks}}
+\;=\;\kappa\,\Big(\tfrac{n_\lambda c}{\ell_P\,\nu}\Big)^{\!3}\,\Big(\tfrac{1}{\nu\,t_P}\Big),
+\]
+where $T=1/\nu$ and $\kappa=\mathcal{O}(10)$ accounts for a handful of arithmetic operations per cell--tick.
+
+\paragraph{Scaling insight.}
+Because $L\propto 1/\nu$ and $T\propto 1/\nu$, the cost \emph{explodes} as
+\[
+\mathcal{U}\;\propto\;\nu^{-4}.
+\]
+Thus lower-frequency (longer-wave) photons are \emph{harder} to simulate planckianly than higher-frequency ones. Using a visible photon is an \emph{optimistic} case.
+
+\paragraph{Optimistic numeric example (visible photon).}
+Take $\nu=6\times10^{14}\,\mathrm{Hz}$ ($\lambda\approx5\times10^{-7}\,\mathrm{m}$), $n_\lambda=10$, and $\kappa=10$:
+\[
+\begin{aligned}
+&L=n_\lambda\lambda \approx 5\times10^{-6}\,\mathrm{m},\qquad
+\frac{L}{\ell_P}\approx 3.1\times10^{29},\quad \Big(\tfrac{L}{\ell_P}\Big)^3\approx 3\times10^{87},\\
+&T=\frac{1}{\nu}\approx 1.67\times10^{-15}\,\mathrm{s},\qquad
+\frac{T}{t_P}\approx 3.1\times10^{28},\\
+&\Rightarrow\quad 
+\boxed{\;\mathcal{U}_{\rm vis}\;\approx\;\kappa\cdot(3\times10^{87})\cdot(3\times10^{28})
+\;\sim\;10^{117}\ \text{cell-updates per period.}\;}
+\end{aligned}
+\]
+
+\paragraph{Two yardsticks for ``available compute''.}
+\begin{enumerate}
+\item \textbf{Aggressive real-world yardstick.} 
+Assume an optimistic aggregated sustained performance of all practical computers $\mathcal{C}_{\rm world}\sim 10^{21}\!-\!10^{22}$ updates/s (exa to few-zetta scale) over one year ($\approx\!3.15\times10^{7}$ s):
+\[
+\boxed{\;\mathcal{C}_{\rm year}\sim 10^{28}\!-\!10^{29}\ \text{updates/year.}\;}
+\]
+\item \textbf{Thermodynamic lower bound (Landauer idealization).} 
+With power budget $P$ at $T\simeq300$ K, the minimum energy per bit erasure is $k_B T\ln 2 \approx 2.8\times10^{-21}\,$J. 
+Even granting $P\sim 10^{13}$ W (multi-TW), the absolute bit-erasure rate would be
+\[
+\boxed{\;\mathcal{C}_{\rm Landauer}\sim \frac{P}{k_B T\ln 2}\sim 3\times10^{33}\ \text{ops/s}\;\Rightarrow\; \sim 10^{41}\ \text{ops/year.}\;}
+\]
+This is a \emph{physical} lower bound on energy per logical erasure, not an achievable engineering reality today.
+\end{enumerate}
+
+\paragraph{Gap estimates (visible photon, one period).}
+Comparing the requirement $\mathcal{U}_{\rm vis}\sim 10^{117}$ to the yardsticks:
+\[
+\text{Gap to world-year:}\quad 
+\frac{\mathcal{U}_{\rm vis}}{\mathcal{C}_{\rm year}}\ \sim\ 10^{88}\!-\!10^{89}.
+\qquad
+\text{Gap to Landauer-year:}\quad
+\frac{\mathcal{U}_{\rm vis}}{10^{41}}\ \sim\ 10^{76}.
+\]
+Even \emph{one} visible-photon period on a planckian lattice is beyond reach by tens of orders of magnitude.
+
+\paragraph{What would it take to be feasible?}
+If one replaces the planckian resolution by an effective coarse grid with spacing $\tilde a$ and time step $\tilde\tau$, the cost falls as
+\[
+\mathcal{U}\ \propto\ \Big(\tfrac{L}{\tilde a}\Big)^3 \Big(\tfrac{T}{\tilde\tau}\Big)
+\ =\ \Big(\tfrac{\ell_P}{\tilde a}\Big)^{\!3}\Big(\tfrac{t_P}{\tilde\tau}\Big)
+\cdot \mathcal{U}_{\rm planck}.
+\]
+A \emph{four-power} relief appears because $L^3T\sim \nu^{-4}$. 
+To bring the visible-photon period into a world-year budget, one would need an effective coarse-graining factor of order
+\[
+\Big(\tfrac{\ell_P}{\tilde a}\Big)^{\!3}\Big(\tfrac{t_P}{\tilde\tau}\Big)\ \sim\ 10^{-88}\!-\!10^{-89},
+\]
+i.e. $\tilde a$ and $\tilde\tau$ many decades \emph{larger} than $\ell_P,t_P$. 
+This is exactly why continuum effective field theories are indispensable: they encode the IR physics without resolving the planckian substrate.
+
+
+
+\section{Emergent Mass and Curvature in the Informational Lattice}
+\label{sec:emergent_mass_curvature}
+
+\subsection{Overview}
+
+Having established the photon dynamics and gauge-invariant lattice action
+in the previous sections, we now turn to the question of how
+mass and curvature can emerge within the same informational framework.
+Rather than introducing them as fundamental postulates,
+both arise here as collective properties of the scalar-gauge system:
+mass through localized energy concentration,
+and curvature through the geometric response of the lattice.
+
+\subsection{Localized Energy and the Defect as a Particle}
+
+Stable localized configurations of the scalar field $\phi$
+appear as topological defects (kinks or solitons),
+which minimize the same unified action introduced earlier
+(see Sec.~\ref{sec:lattice_action}).
+In the $\phi^4$ potential $V(\phi)=\frac{\lambda}{4}(\phi^2-v^2)^2$,
+the field connects two degenerate vacua, $\phi=\pm v$.
+The static kink solution,
+\[
+\phi_K(x)=v\tanh\!\left(\frac{x}{\xi}\right),
+\qquad \xi=\frac{1}{v\sqrt{\lambda}},
+\]
+forms a smooth transition region with localized energy density.
+The total energy,
+\[
+M_0=\int \mathcal{H}(x)\,dx,
+\]
+is finite and defines the rest mass of the defect.
+When the configuration moves, its energy increases as
+$E(v)=M_0/\sqrt{1-v^2}$,
+demonstrating relativistic inertia.
+Small oscillations around the kink introduce an internal mode
+with frequency $\omega_{\text{int}}$,
+linking the rest mass and internal dynamics through
+$M_0\propto\omega_{\text{int}}$,
+consistent with the quantization condition $E=\hbar\omega$.
+Thus, the defect behaves as a genuine massive particle
+arising purely from field self-organization.
+
+\subsection{Curvature and Effective Geometry}
+
+Local variations in the energy density $\mathcal{T}_{\mu\nu}$
+modify the background configuration $\phi_0$
+and hence the coefficients of the kinetic term for small perturbations.
+This defines an effective metric $g_{\mu\nu}$
+governing the propagation of waves (photons):
+\[
+\mathcal{L}_{\text{eff}}\sim \sqrt{|g|}\,g^{\mu\nu}\partial_\mu\psi\,\partial_\nu\psi.
+\]
+Because the total informational energy is conserved under local gauge transformations,
+the discrete curvature equations naturally satisfy
+$\Delta^\mu \mathcal{T}_{\mu\nu}=0$.
+The resulting relation between geometry and energy is expressed as
+\[
+G_{\mu\nu}(\phi_n,\Delta)=\alpha\,\mathcal{T}_{\mu\nu}(\phi_n),
+\]
+where $\alpha$ plays the role of the gravitational coupling.
+In the weak-field limit ($g_{\mu\nu}\simeq\eta_{\mu\nu}+h_{\mu\nu}$),
+the equations reduce to a lattice Poisson form,
+\[
+\Delta^2_{\text{lat}}\Phi(n)\approx4\pi G_{\text{eff}}\rho(n),
+\]
+yielding the Newtonian potential $\Phi(r)\approx -G_{\text{eff}}M_0/r$.
+In vacuum ($\mathcal{T}_{\mu\nu}=0$),
+the curvature perturbations $h_{\mu\nu}$ obey a lattice wave equation
+\[
+\Delta_{\text{lat}}^2h_{\mu\nu}\approx0,
+\]
+describing analog gravitational waves with speed
+$c_{\text{wave}}=c_{\text{photon}}=1$ and small Planck-scale corrections
+$\omega^2=k^2+O(k^4a^2)$.
+
+\subsection{Numerical Verification}
+
+Numerical simulations of the $\phi^4$ lattice confirm all analytical features.
+The kink profile interpolates smoothly between vacua,
+its energy density forms a localized “mass packet”,
+and its energy–velocity dependence follows $E(v)=M_0/\sqrt{1-v^2}$.
+The internal oscillation frequency $\omega_{\text{int}}$
+matches the predicted scaling of $M_0$,
+and plots of $E^2$ versus $P^2$ yield the expected linear dispersion
+$E^2=P^2+M_0^2$.
+Solving the discrete Poisson equation around a static defect
+produces a $1/r$-like potential in $h_{00}$,
+verifying that localized energy induces
+an emergent gravitational response in the effective metric.
+
+\subsection{Domain of Validity}
+
+The emergent description remains valid under
+\[
+k\ll 1/a,\qquad \xi\gg a,\qquad v<c=1.
+\]
+Here $a$ can be identified with a Planck-like cutoff $\ell_P$,
+making $a^{-1}$ the natural ultraviolet limit.
+In this regime the lattice behaves as a continuous medium,
+and Lorentz invariance holds to high precision.
+
+\subsection{Final Interpretation}
+
+While the model is discrete at its foundation,
+its continuum limit reproduces key geometric features of general relativity,
+including the Newtonian potential and curvature waves.
+Both mass and curvature arise as emergent manifestations
+of the same informational field:
+the defect represents localized self-trapping of energy (mass),
+and curvature represents the geometric backreaction
+of the lattice to that energy distribution.
+Together they form a unified picture in which
+matter and geometry share a single informational origin.
+
+
+\section{Mass Generation and the Informational Interpretation of the Higgs Field}
+
+
+\subsection{Geometric Intuition of Mass in the Reversible Lattice}
+In the informational lattice, light and matter emerge as two regimes of the same reversible dynamics.  
+A photon represents a pure wave of symmetry restoration: local cells oscillate and return to equilibrium without leaving any trace.  
+Information flows freely through the lattice but remains delocalized.  
+
+Mass, in contrast, arises when a local region cannot completely restore symmetry without breaking reversibility.  
+A small, self-sustaining knot forms in the informational fabric—a stable topological configuration whose existence constrains the surrounding correlations.  
+Such a knot cannot simply vanish, since its removal would require simultaneous restructuring of many neighboring states.  
+It therefore persists as a localized defect of symmetry, a region where informational flow is cyclically trapped.  
+
+When the defect moves, the lattice must reorganize its correlations step by step, effectively transferring the knot between neighboring cells.  
+This sequential rearrangement introduces a resistance to motion—an \textit{informational inertia}—not as a force but as a geometric constraint of reversibility.  
+Photons thus propagate at the maximal velocity of information transfer, while massive configurations move only through local reversible restructuring and therefore always slower than light.  
+
+The internal reversible oscillation of a stable defect defines an intrinsic frequency \(\omega_0\), linked to its rest energy through \(E = \hbar \omega_0\).  
+Mass then measures the depth of informational entanglement between a localized symmetry anomaly and the surrounding lattice.  
+
+From this perspective, what is usually modeled as interaction with an external Higgs field instead represents the statistical behavior of the lattice’s correlation background.  
+The Higgs potential expresses the equilibrium distribution of these correlations, while coupling constants correspond to stability parameters of distinct defect geometries.  
+A particle “acquires mass” not through interaction with an external scalar field but because its localized anomaly alters the correlation density of the informational substrate, forming an effectively curved domain that limits oscillatory freedom.  
+The Higgs condensate thus appears as the mean statistical state of an information-preserving vacuum whose residual tension defines inertial properties of matter.
+
+\subsection{Mass as a Localized Symmetry Anomaly: Minimal Mechanism}
+We model a stable localized anomaly as a reversible configuration of a coarse field \(\phi \in [-1,1]\) on a one–dimensional lattice.  
+The evolution is second–order and bijective:
+\[
+\Delta_t^2 \phi_n
+=\kappa\,\Delta_x^2 \phi_n - V'(\phi_n),
+\qquad
+\Delta_t^2 \phi_n=\phi_n^{t+1}-2\phi_n^{t}+\phi_n^{t-1},\ 
+\Delta_x^2 \phi_n=\phi_{n+1}^{t}-2\phi_n^{t}+\phi_{n-1}^{t},
+\]
+with a symmetric double–well potential
+\[
+V(\phi)=\tfrac{m_*^2}{2}\phi^2+\tfrac{\lambda}{4}\phi^4,
+\]
+and a conserved per–tick energy
+\[
+\mathcal{E}=\frac12\sum_n\!\left[(\Delta_t\phi_n)^2+\kappa(\Delta_x\phi_n)^2\right]+\sum_n V(\phi_n).
+\]
+
+A static configuration \(\phi_n^{(0)}\) centered at \(X\) minimizes \(\mathcal{E}\) for fixed topology, defining its rest energy
+\[
+M \;\equiv\; \mathcal{E}[\phi^{(0)}]-\mathcal{E}[\text{vac}],
+\]
+which acts as inertial mass.  
+Allowing slow motion via \(\phi_n(t)\approx \phi^{(0)}_{n-X(t)}\) and expanding the energy gives
+\[
+\mathcal{E}(v)=M+\tfrac12 M v^2+\mathcal{O}(v^4),
+\]
+showing that the defect behaves as a massive particle whose kinetic response arises from local reversible dressing of the lattice.
+
+Small oscillations of the defect core define its intrinsic frequency \(\omega_0\), and reversibility enforces a discrete quantum of action per cycle:
+\[
+E_0 = M = \hbar \omega_0.
+\]
+Thus, the rest energy corresponds to an internal reversible cycle—the informational Compton clock of the defect.  
+
+When coupled to linear lattice waves, the moving defect exhibits a Lorentz–type dispersion,
+\[
+E^2 = p^2 + M^2,
+\]
+which follows directly from the constraint of reversible transfer across the lattice.  
+Logical reversibility also bounds localization: the defect must trap at least one reversible quantum (\(\hbar \omega_0\)) but remain below the local Planck–scale limit, defining a finite window of stability.
+
+\subsection{Operational Verification and Continuity with the Photon Sector}
+The massive defect behaves as a compact, localized excitation whose properties can be verified within the same reversible–lattice framework used for the photon sector.  
+Three correspondences confirm that massive and massless modes are continuous limits of a single informational dynamics.
+
+\paragraph{(1) Kinetic verification.}  
+Starting from the equilibrium configuration \(\phi_n^{(0)}\), let the defect move with small velocity \(v \ll 1\), modeled as
+\[
+\phi_n(t) \;\approx\; \phi^{(0)}_{n-X(t)}, \qquad X(t)=v t.
+\]
+Substituting into the energy functional
+\[
+\mathcal{E}=\frac12\sum_n\!\left[(\Delta_t\phi_n)^2+\kappa(\Delta_x\phi_n)^2\right]+\sum_n V(\phi_n),
+\]
+and expanding in \(v\) yields
+\[
+\mathcal{E}(v)=M+\tfrac12 M v^2 + \mathcal{O}(v^4),
+\]
+confirming quadratic kinetic behavior and identifying \(M\) as inertial mass derived from reversible energy flow.
+
+\paragraph{(2) Internal frequency and rest energy.}  
+Linearizing around \(\phi_n^{(0)}\),
+\[
+\Delta_t^2 \delta\phi_n = \kappa\,\Delta_x^2 \delta\phi_n - V''(\phi_n^{(0)})\,\delta\phi_n,
+\]
+the lowest localized mode has frequency \(\omega_0\).  
+Reversibility assigns one quantum of action per oscillation,
+\[
+E_0 = \hbar \omega_0 = M,
+\]
+identifying rest energy with the defect’s internal reversible rhythm—its informational Compton frequency.
+
+\paragraph{(3) Continuity with the photon limit.}  
+As localization weakens (\(V''(\phi)\!\to\!0\)), the dispersion approaches
+\[
+\omega^2 = \omega_0^2 + k^2 \;\longrightarrow\; k^2 \quad (M \to 0),
+\]
+recovering the photon branch of the lattice spectrum.  
+The photon thus represents the delocalized limit of the same reversible excitation when informational tension vanishes.
+
+\bigskip
+Together, these results establish a continuous hierarchy of excitations in the reversible lattice:  
+from delocalized, symmetry-restoring waves (photons) to localized, self-sustaining anomalies (massive particles).  
+Mass emerges not as an external parameter but as an intrinsic mode of reversible information flow, governed by the same quantization and amplitude bounds as the photon sector.
+
+\bigskip
+\noindent
+The localized anomalies described above represent the simplest massive configurations within the reversible lattice.  
+To explore how such structures interact, merge, and generate extended fields, we now generalize this framework to the broader class of \textit{symmetry anomalies}.
+
+\bigskip
+\noindent
+Beyond dynamic invariants such as mass, the reversible lattice also supports structural invariants—topological quantities that remain unchanged under bijective evolution. The most fundamental of these is electric charge.
+
+
+\section{Internal Recalculation of the Black Hole and the Hawking Radiation in the TDS Framework}
+
+\paragraph{From collapse to synchronization.}
+In the Theory of Dynamic Symmetry (TDS), a black hole does not represent a physical collapse into infinite density, but the terminal synchronization of reversible cycles.  
+As the local asymmetry approaches its maximal reversible state, the lattice no longer ``compresses'' matter in the classical sense — instead, it reaches a complete phase lock, where every informational cell becomes phase–synchronized with its neighbors.  
+The traditional notion of ``pressure'' or ``vacuum tension'' is replaced by a global recalculation: the lattice stops redistributing asymmetry and simply stabilizes as a perfectly closed reversible domain.
+
+\paragraph{Informational interior.}
+Inside this domain, no gradients of symmetry remain; hence, no local evolution occurs.  
+The internal state of a black hole is therefore not chaotic or divergent but informationally uniform.  
+All apparent singularities in classical geometry are artifacts of forcing a continuous metric on a discrete reversible substrate.  
+In the TDS lattice, the ``center'' of a black hole is just a region of full equilibrium — the completion of all reversible updates, not a point of infinite curvature.
+
+\paragraph{Hawking radiation as boundary recalculation.}
+Hawking's original model describes virtual particle pairs at the event horizon: one falls inward, one escapes outward.  
+In the TDS interpretation, this process is not a spontaneous creation of energy but a boundary-level phase desynchronization.  
+When two adjacent cells on opposite sides of the horizon update out of phase, a tiny informational mismatch emerges — one cell compensates inward, the other outward.  
+This outward phase relaxation manifests macroscopically as radiation.  
+Therefore, the Hawking effect becomes a surface correction term of the reversible lattice — a statistical consequence of finite synchronization accuracy.
+
+\paragraph{Information conservation.}
+Because all updates in the TDS lattice remain bijective, no information is ever lost.  
+The internal phase of the black hole continues to exist as part of the global state vector of the lattice.  
+What appears as ``loss'' in classical physics is merely a projection: observers outside the horizon can no longer decode the internal correlation structure, but it still contributes to the total informational energy.  
+Thus, the information paradox dissolves — the lattice simply hides correlations below the observational resolution, not destroys them.
+
+\paragraph{Effective thermal spectrum.}
+The near-horizon desynchronization rate defines an effective temperature,
+\[
+T_{\rm eff} \propto \frac{\hbar\,a_{\rm sync}}{2\pi k_B c},
+\]
+where $a_{\rm sync}$ is the local acceleration of phase mismatch (analogous to surface gravity).  
+The classical Hawking temperature becomes an emergent thermodynamic signature of these micro–reversible updates.  
+Radiation remains real and measurable, but its source is informational curvature, not vacuum fluctuations.
+
+\paragraph{Summary.}
+In the TDS framework, a black hole is not a singular object but a phase–complete domain of the lattice.  
+Its evaporation is the slow relaxation of boundary synchronization errors — not the loss of physical matter, but the redistribution of reversible states.  
+Hawking radiation, in this view, is a statistical shadow of the lattice’s effort to maintain global symmetry at the informational limit.
+
+
+
+\section{Topological Origin of Charge in the Reversible Lattice}
+\label{sec:topcharge}
+
+In the informational lattice framework, charge arises not as a continuous parameter of interaction but as a \textbf{topological invariant} of locally reversible dynamics. 
+While mass corresponds to a \emph{dynamic invariant}---the persistence of oscillatory energy within a localized anomaly---charge represents a \emph{structural invariant} that classifies the topology of the reversible configuration itself.
+
+\subsection{Charge as a Topological Invariant}
+Reversibility implies that the evolution
+\begin{equation}
+S_{t+1} = f(S_t)
+\end{equation}
+is bijective, and thus cannot alter the global topological structure of the lattice configuration. 
+If matter corresponds to a stable symmetry anomaly (defect), its charge is determined by the topological class of that defect. 
+The defect may move or oscillate (producing mass), but its topological signature remains invariant.
+
+Let the informational field around a defect be described by a phase variable $\theta(\mathbf{x})$, representing the local reversible phase (informational time shift). 
+Then the total topological number of the configuration is
+\begin{equation}
+N_{\text{top}} = \frac{1}{2\pi} \oint_{\mathcal{C}} \nabla \theta \cdot d\mathbf{l},
+\end{equation}
+where the integration loop $\mathcal{C}$ encloses the defect. 
+The electric charge $Q$ is proportional to this topological number:
+\begin{equation}
+Q \propto N_{\text{top}}.
+\end{equation}
+
+\subsection{$U(1)$ Symmetry as Local Reversibility}
+In the continuum limit, local reversibility corresponds to a local invariance of phase.
+Each lattice cell updates with its own local phase, which may vary without breaking global bijectivity, provided that compensating adjustments propagate between cells.
+This requirement introduces a compensating field $A_\mu$, analogous to the electromagnetic potential.
+
+Formally, informational phase invariance promotes derivatives to covariant derivatives:
+\begin{equation}
+D_\mu = \partial_\mu - i Q A_\mu.
+\end{equation}
+Here, $A_\mu$ represents the compensating flow of reversible phase information across the lattice, ensuring that local timing shifts remain globally consistent.
+Thus, the electromagnetic field emerges as the reversible communication channel maintaining the integrity of local informational phases.
+
+\subsection{Quantization of Charge}
+Because the topological number $N_{\text{top}}$ is integer-valued ($N_{\text{top}}\in\mathbb{Z}$), the charge $Q$ is naturally quantized:
+\begin{equation}
+Q = n Q_0, \qquad n \in \mathbb{Z}.
+\end{equation}
+This directly explains the discreteness of charge without invoking additional quantization postulates.
+
+\subsection{Interpretation}
+In the reversible lattice, mass measures the temporal persistence of a symmetry anomaly (its oscillatory inertia), while charge classifies the topology of that anomaly within the lattice's informational fabric.
+Electromagnetism thus emerges not as an external interaction but as the reversible synchronization of local informational phases within the global symmetry network.
+
+\section{Local Reversibility and the Informational Origin of Gauge Fields}
+\label{sec:gauge}
+
+We now derive the emergence of gauge symmetry as a direct consequence of local reversibility within the informational lattice. 
+Consider the free informational field $\phi$ (complex, carrying charge $Q$) dominating regions of low informational curvature:
+\begin{equation}
+\mathcal{L}_{\text{Matter}} = \partial_\mu \phi^\dagger \partial^\mu \phi - M^2 \phi^\dagger \phi.
+\end{equation}
+This Lagrangian is invariant under the global $U(1)$ phase transformation
+\begin{equation}
+\phi \to e^{i Q \alpha} \phi, \qquad \alpha = \text{const},
+\end{equation}
+representing global reversibility of informational phase.
+
+\subsection{Local Reversibility (Gauge Principle)}
+Requiring invariance under a \emph{local} phase transformation,
+\begin{equation}
+\phi(x) \to \phi'(x) = e^{i Q \theta(x)} \phi(x),
+\end{equation}
+violates the symmetry, since derivatives of $\phi$ acquire additional terms:
+\begin{equation}
+\partial_\mu \phi \to e^{i Q \theta} (\partial_\mu \phi + i Q (\partial_\mu \theta)\phi).
+\end{equation}
+Hence, $\mathcal{L}_{\text{Matter}}$ is not locally invariant, because the derivative ``detects'' local phase gradients.
+
+\subsection{Compensating Field as Informational Synchronization}
+To restore local reversibility, we introduce a compensating field $A_\mu(x)$—the \textit{informational synchronization field}—which redistributes local phase offsets within the reversible lattice.
+We define the covariant derivative:
+\begin{equation}
+D_\mu = \partial_\mu + i Q A_\mu,
+\end{equation}
+and require that it transforms covariantly:
+\begin{equation}
+D_\mu \phi \to e^{i Q \theta(x)} D_\mu \phi.
+\end{equation}
+This condition holds if and only if
+\begin{equation}
+\boxed{A_\mu(x) \to A'_\mu(x) = A_\mu(x) - \frac{1}{Q}\,\partial_\mu \theta(x)}.
+\end{equation}
+Thus, the gauge potential $A_\mu$ represents the reversible field mediating phase consistency across the informational lattice.
+
+\subsection{Locally Reversible Lagrangian}
+Substituting the covariant derivative into the matter Lagrangian gives the locally reversible (gauge-invariant) form:
+\begin{equation}
+\mathcal{L}_{\text{Invariant}} = D_\mu \phi^\dagger D^\mu \phi - M^2 \phi^\dagger \phi.
+\end{equation}
+This Lagrangian describes informational matter interacting with the compensating field $A_\mu$, which enforces local reversibility of the phase.
+
+\subsection{Dynamics of the Synchronization Field}
+The dynamics of $A_\mu$ must itself be reversible and invariant under the same phase transformations.  
+The only antisymmetric, locally reversible combination of $A_\mu$ and its derivatives is the informational field strength tensor:
+\begin{equation}
+F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu,
+\end{equation}
+which satisfies $F'_{\mu\nu}=F_{\mu\nu}$ under the above transformations.
+The simplest locally reversible Lagrangian for this field is therefore:
+\begin{equation}
+\boxed{\mathcal{L}_{\text{EM}} = -\frac{1}{4} F_{\mu\nu} F^{\mu\nu}.}
+\end{equation}
+
+\subsection{Interpretation}
+In the informational interpretation, $A_\mu$ is not an external electromagnetic field but the reversible mediator of local phase synchronization between lattice cells. 
+The standard gauge principle thus emerges as the requirement of preserving \emph{local informational reversibility}, and the photon appears as the propagating mode of informational phase correction.
+
+\section{Informational Higgs Field and Mass Coupling}
+\label{sec:higgs}
+
+\subsection{Interpretation of the Informational Higgs Field}
+The Higgs field $\phi_H$ in the TDS framework is interpreted as the average
+statistical field of local asynchrony or tension $\rho$ in the vacuum.
+It is not an external scalar field but a collective, background state
+of the reversible lattice.
+
+\paragraph{Mexican-Hat Potential.}
+The effective potential
+\[
+V(\phi_H) = \mu^2 \phi_H^\dagger \phi_H + \lambda (\phi_H^\dagger \phi_H)^2
+\]
+expresses the equilibrium distribution of local symmetry tension.
+Here $\lambda>0$ represents the lattice’s resistance to excessive local
+fluctuations, while $\mu^2<0$ signifies that perfect symmetry
+($\phi_H=0$) is unstable—the vacuum prefers a finite reversible tension.
+The stable background expectation value is
+\[
+\langle \phi_H \rangle = v = \sqrt{-\frac{\mu^2}{2\lambda}} \neq 0.
+\]
+This corresponds to the spontaneous condensation of informational foam,
+establishing a uniform background of reversible tension.
+
+\subsection{Mass Generation for Gauge Bosons}
+Initially, the gauge bosons $W^1, W^2, W^3$ (from $SU(2)$)
+and $B$ (from $U(1)$) are massless, ensuring local reversibility.
+When the informational Higgs field condenses ($\phi_H \to v$),
+its background couples to these fields, generating effective inertia.
+Three degrees of freedom of $\phi_H$ become the longitudinal modes
+of the massive bosons $W^\pm$ and $Z^0$, while one combination remains
+massless as the photon:
+\[
+\boxed{M_W \propto g v, \quad M_Z \propto g' v.}
+\]
+This reflects the transition $SU(2)\times U(1)\to U(1)_{\text{EM}}$,
+interpreted here as the stabilization of the lattice at finite reversible
+tension.
+
+\subsection{Mass Generation for Fermions}
+Fermions (quarks and leptons) are localized symmetry anomalies (defects)
+with internal reversible oscillations $\omega_0$.
+Their mass arises through Yukawa coupling with the informational background:
+\[
+\mathcal{L}_{\text{Yukawa}} = -\lambda_f \phi_H \bar{\psi}\psi.
+\]
+Replacing $\phi_H$ by its expectation value $v$ yields
+\[
+\boxed{M_f = \lambda_f v.}
+\]
+The coupling $\lambda_f$ quantifies how strongly a given defect interacts
+with the informational foam. The more tightly a defect binds to the
+background, the greater its effective inertia.
+
+
+\subsection{Mass as a Frozen Phase: a Field–Theoretic Template and Phase Archetypes}
+
+\paragraph{Phase mismatch field.}
+Let $\theta(x,t)$ denote the local synchronization phase of the reversible lattice and
+$\theta_{\rm vac}(t)$ the uniform vacuum phase. The \emph{frozen phase} is the
+mismatch $\delta\theta(x,t)=\theta(x,t)-\theta_{\rm vac}(t)$.
+In the infrared window (reversible/linear regime) we model its coarse dynamics by
+\begin{equation}
+\label{eq:Ltheta}
+\mathcal{L}_\theta \;=\;
+\frac{\chi}{2}(\partial_t \delta\theta)^2
+-\frac{\kappa}{2}\,|\nabla \delta\theta|^2
+-U(\delta\theta),
+\qquad
+U(\delta\theta)=\frac{m_*^2}{2}\delta\theta^2+\frac{\lambda}{4}\delta\theta^4
+\;\;\text{or}\;\;
+U_\circ(\delta\theta)=\mu^2\bigl(1-\cos\delta\theta\bigr),
+\end{equation}
+where $\chi$ and $\kappa$ encode the local reversible response (phase inertia and stiffness),
+and $U$ captures retention of phase offset by the background (with a periodic alternative $U_\circ$
+for topological sectors).
+
+\paragraph{Invariant mass of a localized phase.}
+For a localized, time–periodic solution
+$\delta\theta(x,t)=f(x)\cos(\omega_0 t)$
+with internal frequency $\omega_0$, the time–averaged energy
+defines the inertial mass
+\begin{equation}
+\label{eq:Mintegral}
+M \;=\; \int d^3x\;
+\Bigg\langle
+\frac{\chi}{2}(\partial_t \delta\theta)^2
++\frac{\kappa}{2}|\nabla \delta\theta|^2
++U(\delta\theta)
+\Bigg\rangle_t
+\;=\;
+\int d^3x\;
+\Bigg[
+\frac{\chi\,\omega_0^2}{4}\,f^2
++\frac{\kappa}{2}|\nabla f|^2
++\overline{U}\bigl(f\bigr)
+\Bigg],
+\end{equation}
+with $\overline{U}(f)$ the temporal average of $U(f\cos\omega_0 t)$
+(e.g.\ $\overline{\delta\theta^2}=\tfrac12 f^2$, $\overline{\delta\theta^4}=\tfrac{3}{8}f^4$).
+Logical reversibility fixes the internal energy quantum via the hard action condition,
+so that for the fundamental closed cycle
+\begin{equation}
+\label{eq:Compton}
+E_0\;=\;\hbar \omega_0 \quad\Rightarrow\quad M\;=\;\hbar\omega_0
+\qquad\text{(minimal closed phase loop)}.
+\end{equation}
+Nontrivial phase holonomy on a loop $\partial\Omega$,
+\begin{equation}
+\label{eq:holonomy_mass}
+N_{\rm top}
+=\frac{1}{2\pi}\oint_{\partial\Omega}\nabla\theta\cdot d\mathbf{l}\in\mathbb{Z},
+\end{equation}
+pins additional stability sectors and can quantize $M$ by topological charge.
+
+\paragraph{Informational curvature link.}
+The local information geometry reads
+$g^{(\text{info})}_{ij}\propto \partial_i\rho\,\partial_j\rho$ with
+$\rho(x)\sim \tfrac{\chi}{2}\langle(\partial_t\delta\theta)^2\rangle
++\tfrac{\kappa}{2}\langle|\nabla\delta\theta|^2\rangle+ \langle U\rangle$;
+thus a frozen phase profile $f(x)$ produces curvature via gradients of $\rho$.
+
+\subsubsection*{Phase archetypes and scaling estimates}
+
+Below we collect IR scalings for typical stable patterns (profiles $f$) with a coherence length
+$\xi$ and phase amplitude $\Delta\theta$ (peak mismatch). These formulae provide
+back–of–the–envelope masses in terms of lattice response $(\chi,\kappa)$ and the
+retention scale in $U$.
+
+\paragraph{(A) Point–like defect (3D lump).}
+Take a spherically symmetric profile, e.g.\ $f(r)=\Delta\theta\,\sech(r/\xi)$ or
+$f(r)=\Delta\theta\,\tanh(r/\xi)$.
+Up to shape constants $c_i=\mathcal{O}(1)$,
+\begin{equation}
+\label{eq:Mpoint}
+\boxed{\;
+M_{\rm point}\;\simeq\;
+4\pi\,\xi^{3}\Big[
+c_1\,\chi\,\omega_0^2\,(\Delta\theta)^2
++c_2\,\kappa\,\frac{(\Delta\theta)^2}{\xi^{2}}
++c_3\,U_{\rm eff}(\Delta\theta)
+\Big],
+\;}
+\end{equation}
+$U_{\rm eff}$ being the effective (time–averaged) potential density at amplitude $\Delta\theta$.
+The $\kappa/\xi^2$ piece is the (phase–stiffness) “surface tension” cost;
+the $\chi\,\omega_0^2$ piece is the internal Compton oscillation;
+$U_{\rm eff}$ is the static retention (pinning) of the phase.
+
+\paragraph{(B) String–like defect (line, mass per unit length).}
+For an axially symmetric tube $f(\rho)=\Delta\theta\,\sech(\rho/\xi)$,
+\begin{equation}
+\label{eq:Tstring}
+\boxed{\;
+\mathcal{T}_{\rm string}\equiv \frac{M_{\rm string}}{L}
+\;\simeq\;
+2\pi\,\xi^{2}\Big[
+d_1\,\chi\,\omega_0^2\,(\Delta\theta)^2
++d_2\,\kappa\,\frac{(\Delta\theta)^2}{\xi^{2}}
++d_3\,U_{\rm eff}(\Delta\theta)
+\Big].
+\;}
+\end{equation}
+
+\paragraph{(C) Domain wall (sheet, mass per unit area).}
+For a planar kink $f(z)=\Delta\theta\,\tanh(z/\xi)$,
+\begin{equation}
+\label{eq:sigmawall}
+\boxed{\;
+\sigma_{\rm wall}\equiv \frac{M_{\rm wall}}{\mathcal{A}}
+\;\simeq\;
+e_1\,\chi\,\omega_0^2\,(\Delta\theta)^2\,\xi
++e_2\,\kappa\,\frac{(\Delta\theta)^2}{\xi}
++e_3\,U_{\rm eff}(\Delta\theta)\,\xi.
+\;}
+\end{equation}
+
+\paragraph{(D) Composite bound states (clusters).}
+For $n$ phase lumps within mutual distance $\lesssim \xi$, the leading estimate
+\begin{equation}
+\label{eq:cluster}
+M_{n\text{-cluster}}\;\approx\; \sum_{a=1}^n M_a
+\;-\;\sum_{\langle a b\rangle}\,E_{\rm bind}(a,b),
+\quad
+E_{\rm bind}(a,b)
+\sim
+\int d^3x\;\kappa\,\nabla f_a\!\cdot\!\nabla f_b
++\Delta U(f_a,f_b),
+\end{equation}
+with $\Delta U$ the non–linear potential interference. Destructive overlap of gradients lowers the total:
+bound mass is less than the sum of constituents, consistent with an emergent binding energy.
+
+\subsubsection*{Kinematics and quantization links}
+
+\paragraph{Internal clock and inertia.}
+The internal Compton–like oscillation fixes the rest energy:
+\begin{equation}
+\label{eq:clock}
+E_0 \;=\; \hbar\omega_0,
+\qquad
+M\;=\;\hbar\omega_0,
+\qquad
+E^2=p^2+M^2
+\;\;\text{(for freely drifting frozen phases)}.
+\end{equation}
+In the TDS lattice this follows from the hard action cycle and bijective evolution.
+
+\paragraph{Topological protection.}
+If $\delta\theta$ carries nonzero winding \eqref{eq:holonomy_mass}, then
+$\Delta\theta$ is pinned modulo $2\pi$, and the lightest mass in a given sector
+scales with the stiffness and the core size:
+\begin{equation}
+\label{eq:topmass}
+M_{\rm top}\sim
+\begin{cases}
+4\pi\,\kappa\,\dfrac{(\Delta\theta)^2}{\xi}\quad &\text{(vortex core in 3D)},\\[8pt]
+2\pi\,\kappa\,(\Delta\theta)^2 \quad &\text{(line defect per unit length)}.
+\end{cases}
+\end{equation}
+
+\paragraph{Metric back–reaction (weak field).}
+Let $\rho_\theta(x)$ be the energy density from \eqref{eq:Mintegral}.
+Then the informational metric response $g^{(\text{info})}_{ij}\propto \partial_i\rho_\theta\,\partial_j\rho_\theta$
+induces an effective Newtonian potential $\Phi$ via a lattice Poisson analogue
+\begin{equation}
+\label{eq:poisson_info}
+\Delta^2_{\rm lat}\,\Phi(x)\;\simeq\;4\pi\,G_{\rm eff}\,\rho_\theta(x),
+\qquad
+G_{\rm eff}\;\propto\;\alpha\,(\chi,\kappa,\Lambda_P) ,
+\end{equation}
+so that phase lumps curve the informational geometry and deflect geodesics (light) accordingly.
+
+\subsubsection*{How to use these templates}
+Equations \eqref{eq:Mpoint}–\eqref{eq:sigmawall} give IR–stable scaling relations for mass
+in terms of the lattice response $(\chi,\kappa)$, coherence length $\xi$, and
+phase amplitude $\Delta\theta$. The Compton link \eqref{eq:clock} ties $M$ to the
+internal reversible cycle, while \eqref{eq:poisson_info} connects mass to geometry.
+These relations make “mass as a frozen phase” operational: different morphologies (point/line/sheet/cluster)
+map to distinct but unified mass functionals on the same reversible substrate.
+
+
+
+\section{Internal Symmetries: Isospin and Color as Informational Degrees of Freedom}
+\label{sec:suN}
+
+\subsection{Interpretation of Isospin and Color}
+In the TDS framework, additional internal degrees of freedom correspond to
+the internal configuration of the symmetry anomaly itself.
+Quarks and leptons are not elementary in the geometric sense but represent
+distinct classes of reversible topological structures within the lattice.
+
+\paragraph{Quarks and Color ($SU(3)$).}
+A quark corresponds to a multi–loop topological configuration whose stability
+requires three mutually transformable internal states (“colors”).
+The $SU(3)$ symmetry thus emerges as the reversible permutation of these internal
+informational loops:
+\[
+\Psi_{\text{color}} =
+\begin{pmatrix} \phi_r \\ \phi_g \\ \phi_b \end{pmatrix},
+\qquad
+\Psi \to U(x)\Psi,\;
+U(x)=e^{i g T^a \theta^a(x)} \in SU(3).
+\]
+This reflects the local reversibility of triplet–linked informational currents,
+while $f^{abc}$ encode their mutual coupling.
+
+\paragraph{Leptons and Isospin ($SU(2)$).}
+Similarly, weak interactions pair leptons into reversible doublets,
+such as $(\nu_e,e^-)$, where the $SU(2)$ symmetry interchanges two
+informational sub–configurations of the same topological defect.
+Chirality violation in weak processes corresponds to a structural
+asymmetry of the defect under reflection—the lattice analogue of
+handedness.
+
+\subsection{Gauge Principle for $SU(N)$}
+Local reversibility in the internal configuration space requires that
+the informational Lagrangian remain invariant under local $SU(N)$ transformations.
+The informational field $\Psi(x)$ is now a multiplet transforming as
+\[
+\Psi(x)\to\Psi'(x)=U(x)\Psi(x),
+\quad
+U(x)=e^{i g T^a \theta^a(x)}.
+\]
+To preserve local reversibility, ordinary derivatives become covariant:
+\[
+D_\mu = \partial_\mu - i g T^a W^a_\mu,
+\]
+introducing $N^2\!-\!1$ compensating fields $W_\mu^a$ that maintain
+phase–structure consistency between neighboring regions of the lattice.
+
+\subsection{Non–Abelian Informational Field Strength}
+The reversible informational tension of the $SU(N)$ synchronization field is
+\[
+F^a_{\mu\nu} = \partial_\mu W^a_\nu - \partial_\nu W^a_\mu
+               + g f^{abc} W^b_\mu W^c_\nu,
+\]
+where $f^{abc}$ are the structure constants of the Lie algebra.
+The corresponding locally reversible Lagrangian reads
+\[
+\boxed{\mathcal{L}_{\text{Non-Abelian}}
+= -\frac{1}{4} F^a_{\mu\nu} F^{a\mu\nu}}.
+\]
+The nonlinear term encodes the self–interaction of informational fluxes,
+explaining the intrinsic coupling of gluons and $W/Z$ bosons
+as a mathematical consequence of maintaining local reversibility
+within internally structured symmetry anomalies.
+
+% ===================== DEMOS: Informational Regularization =====================
+\section*{Informational Regularization: Demonstrations on Equations}
+
+\paragraph{Convention.}
+We define the \emph{informational cutoff} as the bound of distinguishability for field modes, naturally emerging from the Planck-scale lattice spacing \(a=\ell_P\):
+\[
+\Lambda_{\rm info}\equiv \frac{\pi}{\ell_P},\qquad 
+w_\Lambda(k)=e^{-k^2/\Lambda_{\rm info}^2},\qquad
+\Theta_\Lambda(\mathbf{k})=\Theta(\Lambda_{\rm info}-|\mathbf{k}|).
+\]
+All continuum integrals are understood with an informational window,
+\[
+\int d^4k \;\longrightarrow\; \int d^4k\,w_\Lambda(k),
+\]
+which acts not as a hard cutoff, but as a projection onto the subspace of \emph{distinguishable} field modes.
+Modes with \(|k|>\Lambda_{\rm info}\) are informationally redundant, contributing no new independent degrees of freedom.
+This is not a “grain of space” but the limit of distinguishability itself.
+
+
+\subsection*{Numerical Consistency of the Photon Window}
+\addcontentsline{toc}{subsection}{Numerical Consistency of the Photon Window}
+
+The limits derived from the informational lattice naturally reproduce the full observable photon spectrum without any external calibration.
+Starting from the fundamental step size $\ell_P$ and the temporal period $t_P$, the lattice sets both ultraviolet and infrared boundaries for reversible photon states:
+\[
+\lambda_{\min} \approx 2\,\ell_P,\qquad 
+\lambda_{\max} \approx L,
+\]
+where $L$ is the coherent scale of the reversible domain.
+This defines the intrinsic “photon window”:
+\[
+f_{\min} = \frac{c}{L},\qquad 
+f_{\max} = \frac{c}{2\,\ell_P}.
+\]
+When expressed numerically, the window extends across roughly twenty orders of magnitude in wavelength, fully matching the range of photons actually observed in nature—from kilometer-scale radio waves to sub-picometer $\gamma$-rays.
+The relative deviation between the model’s limits and empirical values remains within only a few orders of magnitude, corresponding to the uncertainty of the macroscopic coherence scale~$L$.
+Thus, the Planck-based lattice not only recovers the observed electromagnetic spectrum, but also explains why the spectrum cannot extend beyond it: the Planck cell itself defines the ultraviolet termination, while the system’s reversible coherence defines the infrared boundary.
+
+
+
+% ----------------------------------------------------------------
+\subsection*{A. Electron self-energy (QED): logarithmic instead of infinite}
+
+The one-loop mass correction in Feynman gauge with the informational window reads:
+\[
+\Sigma(\slashed{p})=
+\frac{\alpha}{4\pi}(\slashed{p}-4m)
+\Big[\ln\!\frac{\Lambda_{\rm info}^2}{m^2}+\mathcal{O}(1)\Big].
+\]
+In the continuum limit \(\ln\Lambda\to\infty\), while here \(\Lambda_{\rm info}\) is finite since modes with \(|k|>\Lambda_{\rm info}\) are informationally indistinguishable and add no independent contribution. 
+Standard renormalization of mass and charge remains, but without a bare infinity.
+
+% ----------------------------------------------------------------
+\subsection*{B. Vacuum energy: density saturation}
+
+The zero-point energy of a free field with the informational window:
+\[
+\rho_{\rm vac}=\frac{1}{2}\!\int\!\frac{d^3k}{(2\pi)^3}\,\hbar\omega_k\,w_\Lambda(k)
+=\frac{\hbar c}{16\pi^2}\Lambda_{\rm info}^4\quad(\text{massless}).
+\]
+With a smoother or sharper window, coefficients vary but the \(\Lambda^4\) scaling remains.
+This growth does not signal a physical catastrophe but \emph{informational saturation}: 
+above \(\Lambda_{\rm info}\), the density of states no longer increases the extractable information. 
+The observable vacuum density \(\rho_{\rm vac}^{\rm obs}=\rho_{\rm vac}^{\rm (low)}+\delta\rho\) 
+is fixed by infrared phenomenology; the high-frequency part \(\sim \Lambda_{\rm info}^4\) 
+is informationally inaccessible.
+
+% ----------------------------------------------------------------
+\subsection*{C. Black hole core: curvature cap and minimal radius}
+
+For Schwarzschild geometry the Kretschmann invariant
+\(
+K=R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}
+=\frac{48 G^2M^2}{c^4 r^6}.
+\)
+Informational saturation imposes
+\(
+K\le K_{\max}=\kappa_{\rm info}/\ell_P^4
+\)
+(\(\kappa_{\rm info}\sim1\)).
+Hence the \emph{minimal admissible radius}
+\[
+r_{\min}(M)=
+\left(\frac{48 G^2 M^2}{c^4 K_{\max}}\right)^{1/6}
+=\left(\frac{48}{\kappa_{\rm info}}\right)^{1/6}
+(\ell_P^2 r_s^2)^{1/6}
+\propto \ell_P^{1/3} r_s^{1/3},
+\]
+where \(r_s=2GM/c^2\). 
+The singularity is replaced by a saturated informational core \(r\ge r_{\min}\),
+consistent with reversibility—information is not lost but closed within the saturated region.
+
+% ----------------------------------------------------------------
+\subsection*{D. Scalar $\phi^4$ loop: no ultraviolet divergence}
+
+For the Euclidean self-energy with informational window:
+\[
+\Sigma(p^2)=\frac{\lambda}{2}\!\int\!\frac{d^4k}{(2\pi)^4}\,
+\frac{w_\Lambda(k)}{k^2+m^2}
+=\frac{\lambda}{32\pi^2}\!\left[\Lambda_{\rm info}^2
+- m^2\ln\!\Big(1+\frac{\Lambda_{\rm info}^2}{m^2}\Big)\right].
+\]
+In the continuum the first term \(\propto \Lambda^2\) diverges;
+here it is finite and interpreted as an \emph{indistinguishable} renormalization of local parameters. 
+The logarithmic term gives the usual mild scale dependence.
+
+% ----------------------------------------------------------------
+\subsection*{E. Light and indistinguishability of high frequencies}
+
+For the photon field projected onto distinguishable modes:
+\[
+\hat{\Psi}_\Lambda(\mathbf{x})=\!\int\!\frac{d^3k}{(2\pi)^3}\,
+w_\Lambda(k)\,\hat{a}_{\mathbf{k}}\,e^{i\mathbf{k}\cdot\mathbf{x}},
+\qquad
+\langle\hat{\mathcal{O}}\rangle=\langle \hat{\mathcal{O}}[\hat{\Psi}_\Lambda]\rangle.
+\]
+The spectral energy density becomes
+\[
+u_\Lambda(\omega)=\frac{\hbar}{2\pi^2 c^3}\,\omega^3\,\Theta(\omega_\Lambda-\omega),
+\qquad \omega_\Lambda=c\,\Lambda_{\rm info}.
+\]
+High-frequency tails are absent not because “nothing exists,” 
+but because additional modes beyond \(\omega_\Lambda\) contribute no new distinguishable information.
+Similarly, interference between two nearby frequencies \(\omega_1,\omega_2\) 
+becomes informationally inaccessible for \(|\omega_1-\omega_2|<1/T\) within an observation time \(T\),
+matching the mutual-information bound of the detector–field system.
+
+% ----------------------------------------------------------------
+\subsection*{F. Classical self-energy of charge: finite lower radius}
+
+For a point charge, classical field energy \(U=\int d^3x\,\tfrac{\varepsilon_0 E^2}{2}\) diverges as \(1/r\).
+Informational saturation introduces an effective lower radius \(r_{\min}\sim \ell_P\)
+(the limit of distinguishability):
+\[
+U_{\rm info}\simeq \frac{e^2}{8\pi\varepsilon_0\,r_{\min}}
+\sim \frac{e^2}{8\pi\varepsilon_0\,\ell_P},
+\]
+replacing the infinity with a finite local renormalization.
+
+% ----------------------------------------------------------------
+\subsection*{G. Methodological note}
+
+(1) The cutoff \(\Lambda_{\rm info}\) acts as a projection operator onto distinguishable states, not as a hard physical boundary;  
+(2) Standard renormalizations survive, but the ontological status of ultraviolet divergences disappears—they become double counting of informationally equivalent micro-modes;  
+(3) In gravity, the curvature cap implements the same distinguishability principle, replacing singularities with saturated cores;  
+(4) All results are consistent with the reversible lattice framework introduced in the previous sections, where \(a=\ell_P\) sets the informational bandwidth of space.
+% =================== end ===================
+
+
+\paragraph{Interpretation.}
+Thus, internal symmetries do not represent arbitrary group choices,
+but natural extensions of the lattice’s demand for local reversibility
+in higher–order topological defects. The color and isospin charges
+are informational invariants, and their gauge fields describe
+the reversible synchronization of multi–loop configurations
+within the symmetry lattice.
+
+\paragraph{Transition to Defect Topology.}
+The non–Abelian synchronization fields thus describe the reversible
+informational tension surrounding structured defects.
+In the following section, we examine how such localized anomalies
+stabilize and interact within the lattice, giving rise to persistent
+topological matter states.
+
+
+\section{Defects and Symmetry Anomalies}
+A \textit{symmetry anomaly} is a persistent topological mismatch that cannot be removed by any local reversible update.
+For the binary lattice (\(s_i = \pm 1\)), define domain walls as
+\[
+\mathcal{D} = \{ \langle ij\rangle : s_i \neq s_j \},
+\]
+which separate symmetric regions.
+The local topological charge is
+\[
+q_i = \frac{1}{2}\sum_{j\in N_i} (1 - s_i s_j), \qquad
+Q = \sum_i q_i,
+\]
+counting mismatches.
+Pair creation of defect–antidefect configurations must preserve total energy under reversible evolution:
+\[
+H(f(S)) = H(S), \qquad \Delta Q = 0.
+\]
+Such domain boundaries are conceptually similar to topological excitations in the \textit{Kitaev toric code} \cite{kitaev2003} or vortex-like defects in \textit{XY/Heisenberg lattices} \cite{kosterlitz1973}.
+In two dimensions, a minimal example is a single plaquette with one flipped spin.
+Its boundary line forms a closed loop of domain walls; the loop’s persistence under all reversible local updates corresponds to a stable “particle” excitation.
+The surrounding gradients \(\nabla\phi\) describe its field.
+
+
+\section{Effective Geometry}
+
+On macroscopic scales, local symmetry tension corresponds to effective curvature.
+Let the coarse-grained energy density $\rho = \mathcal{H}(\phi)$ act as a source for an emergent metric
+\[
+g_{\mu\nu}^{\text{eff}} = \eta_{\mu\nu} + h_{\mu\nu},
+\]
+satisfying an analogue of the linearized Einstein equation,
+\[
+\square \bar h_{\mu\nu} = -\,\alpha\, T_{\mu\nu}[\phi],
+\quad
+T_{\mu\nu} = \partial_\mu \phi\,\partial_\nu \phi - \eta_{\mu\nu}\,\mathcal{L}(\phi),
+\]
+where $\bar h_{\mu\nu} = h_{\mu\nu} - \tfrac{1}{2}\eta_{\mu\nu}h$, and $\alpha$ plays the role of an effective coupling.
+
+At macroscopic limits, $\alpha$ could approach $16\pi G / c^4$, yielding a gravitational analogue.
+In this limit, the informational stress tensor $T_{\mu\nu}[\phi]$ plays the role of an effective source of curvature, and small perturbations $h_{\mu\nu}$ obey
+\[
+\square h_{\mu\nu} = -\,\frac{16\pi G}{c^4}\,T_{\mu\nu}[\phi].
+\]
+Under suitable coarse-graining, the informational metric $g_{\mu\nu}^{\text{eff}}$ therefore reproduces the weak–field regime of general relativity.  
+Gravity, in this picture, is not a fundamental force but the statistical elasticity of the informational lattice—the macroscopic response of its reversible substrate to persistent asymmetry.
+
+Hence, curvature appears as a collective statistical response of the lattice to persistent asymmetry.
+
+\paragraph{Variation and informational elasticity.}
+The local curvature of the effective geometry can be related to variations of the coarse-grained energy functional
+\[
+\mathcal{H}[\phi] =
+\int \!\mathrm{d}^d x
+\left[
+\frac{\kappa}{2}|\nabla\phi|^2 + V(\phi)
+\right].
+\]
+The Euler–Lagrange variation gives
+\[
+\frac{\delta \mathcal{H}}{\delta \phi} = -\,\kappa\,\nabla_i \!\left(g^{ij}_{(\text{info})}\nabla_j \phi\right) + V'(\phi),
+\]
+where the tensor \(g^{ij}_{(\text{info})}\) defines an \textit{informational metric} that quantifies local anisotropy of symmetry restoration.
+In the near–equilibrium regime, small deviations of \(g^{ij}_{(\text{info})}\) from \(\delta^{ij}\) correspond to effective curvature:
+\[
+R^{(\text{info})}_{ij} \propto \partial_i\partial_j \rho(\mathbf{x}),
+\]
+so that regions of high informational tension (\(|\nabla\phi|^2\) large) act as sources of positive curvature.
+This connects the lattice’s microscopic symmetry dynamics with emergent spacetime geometry: curvature arises as the coarse-grained manifestation of the lattice’s informational elasticity.
+
+\subsection{Vacuum Fluctuations and Informational Foam}
+
+The reversible lattice evolves at a fixed fundamental update rate—one cell per tick—preserving strict locality and total information.
+Yet perfect homogeneity is never achieved. Microscopic asymmetries in local configuration continuously generate micro-fluctuations, forming an ever-shifting informational foam.
+These transient deviations do not violate reversibility; rather, they express the lattice’s local effort to reconcile competing symmetry constraints within a finite update rhythm.
+
+Each fluctuation introduces infinitesimal timing offsets and correlation shifts among neighboring cells, producing subtle scattering and delay of propagating excitations.
+Individually negligible, these micro-delays accumulate into a persistent dynamic texture that cannot be removed without breaking reversibility itself.
+On macroscopic scales, the collective field of such correlated delays manifests as curvature of the effective geometry and as apparent loss of coherence or energy, even though total information remains perfectly conserved.
+
+In this picture, the vacuum is not an inert void but a self-correcting, dynamically reversible state—an ocean of microscopic negotiations of symmetry.
+Curvature, noise, and even temporal directionality emerge as large-scale statistical expressions of this continuous informational adjustment, where perfect symmetry is never achieved but eternally approached.
+
+\subsection{Informational Curvature and Metric Emergence}
+If global expansion is interpreted as progressive decorrelation within an information-preserving lattice, then an effective metric structure can be introduced to quantify local informational separation.
+Let $\rho(x,t)$ denote the local configuration density or symmetry tension at site $x$ and time $t$.
+Define the informational line element as
+\begin{equation}
+\mathrm{d}\ell^2 = g_{ij}^{(\text{info})}(x,t)\,\mathrm{d}x^i\,\mathrm{d}x^j,
+\end{equation}
+where $g_{ij}^{(\text{info})}$ represents the effective informational metric determined by the local gradient of configuration correlations,
+\begin{equation}
+g_{ij}^{(\text{info})} \propto \partial_i \rho\,\partial_j \rho.
+\end{equation}
+Regions of higher decorrelation correspond to positive informational curvature, indicating divergence of local states and effective expansion of informational distances.
+Conversely, correlated or symmetry-restoring regions exhibit negative curvature, corresponding to local contraction or coherence domains.
+Under coarse-graining, the informational metric $g_{ij}^{(\text{info})}$ gives rise to an emergent spacetime geometry $g_{\mu\nu}^{(\text{eff})}$ such that
+\begin{equation}
+g_{\mu\nu}^{(\text{eff})} = \eta_{\mu\nu} + \alpha\, h_{\mu\nu}[\rho],
+\end{equation}
+where $\alpha$ is a coupling parameter relating informational and geometric curvature scales.
+Thus, spacetime curvature can be understood as a macroscopic expression of microscopic decorrelation dynamics within the reversible lattice.
+In this framework, both temporal directionality and geometric expansion emerge not as fundamental properties but as large-scale statistical manifestations of reversible, information-preserving evolution.
+
+\subsection{Einstein sector: action, closure, and weak-field limit}
+
+\paragraph{Action and variational principle.}
+We treat the metric $g_{\mu\nu}$ as an independent coarse--grained field and couple it to the informational sector via the standard diffeomorphism-invariant action
+\begin{equation}
+S[g,\rho,\ldots] \;=\; \int \mathrm{d}^4x\,\sqrt{-g}\,
+\bigg[\frac{1}{2\kappa}\,R \;+\; \mathcal L_{\rm info}(\rho, \nabla\rho; g) \bigg],
+\qquad \kappa \equiv \frac{8\pi G}{c^4}.
+\end{equation}
+For a single informational scalar we take, at leading order in derivatives,
+\begin{equation}
+\mathcal L_{\rm info} \;=\; \frac{1}{2} g^{\mu\nu}\partial_\mu\rho\,\partial_\nu\rho \;-\; V(\rho)
+\quad\Rightarrow\quad
+T_{\mu\nu} \;=\; \partial_\mu\rho\,\partial_\nu\rho \;-\; g_{\mu\nu}\,\mathcal L_{\rm info}.
+\end{equation}
+Variation w.r.t. $g^{\mu\nu}$ yields Einstein’s equations
+\begin{equation}
+G_{\mu\nu} \;\equiv\; R_{\mu\nu} - \tfrac{1}{2} g_{\mu\nu} R \;=\; \kappa\,T_{\mu\nu},
+\qquad \nabla^\mu T_{\mu\nu}=0,
+\end{equation}
+where the last identity follows from diffeomorphism invariance (Bianchi identity).
+
+\paragraph{Constitutive closure to the informational metric.}
+The “informational metric” suggested in the main text,
+$g^{(\text{info})}_{\mu\nu}\propto \partial_\mu\rho\,\partial_\nu\rho$,
+is interpreted as the \emph{leading} term of a derivative expansion for the metric response in the weak-field regime:
+\begin{equation}
+g_{\mu\nu} \;=\; \eta_{\mu\nu} \;+\; h_{\mu\nu},\qquad
+h_{\mu\nu} \;=\; \frac{\lambda_1}{\Lambda^4}\,
+\Big(\partial_\mu\rho\,\partial_\nu\rho - \tfrac{1}{4}\eta_{\mu\nu}(\partial\rho)^2\Big)
+\;+\; \mathcal O\!\big(\partial^4/\Lambda^6\big),
+\label{eq:constitutive}
+\end{equation}
+with a UV scale $\Lambda$ (set by the lattice), and a dimensionless $\lambda_1=\mathcal O(1)$.
+Equation~\eqref{eq:constitutive} is a \emph{closure ansatz}: it says that, in the IR window, the dominant geometric response is driven by informational tension gradients. Consistency requires $|h_{\mu\nu}|\ll 1$, i.e. $(\partial\rho)^2\ll \Lambda^4$.
+
+\paragraph{Linearized field equations and Green-function solution.}
+In harmonic gauge, $\partial^\mu \bar h_{\mu\nu}=0$ with $\bar h_{\mu\nu}=h_{\mu\nu}-\tfrac12 \eta_{\mu\nu}h$,
+\begin{equation}
+\square \,\bar h_{\mu\nu} \;=\; -\,2\kappa\,T_{\mu\nu} \;+\; \mathcal O(h\,\partial^2),
+\end{equation}
+so that
+\begin{equation}
+\bar h_{\mu\nu}(x) \;=\; 2\kappa \int \mathrm{d}^4x'\,G_{\rm ret}(x-x')\,T_{\mu\nu}(x') \;+\; \cdots ,
+\end{equation}
+which makes precise that geometry is the nonlocal elastic response to informational tension $T_{\mu\nu}$.
+
+\paragraph{Newtonian limit.}
+For weak, static sources with $v\ll c$ and $T_{00}\simeq \rho_E c^2$,
+\begin{equation}
+g_{00} \simeq -\Big(1+\tfrac{2\Phi}{c^2}\Big),\qquad
+\nabla^2 \Phi \;=\; 4\pi G\,\rho_E,
+\end{equation}
+where $\rho_E = \tfrac12\big[(\partial_t\rho)^2/c^2 + (\nabla\rho)^2\big] + V(\rho)$ is the informational energy density.
+Thus the lattice’s informational energy acts as the source of the Newtonian potential.
+
+\paragraph{Gravitational waves.}
+In vacuum ($T_{\mu\nu}=0$) the linearized equations give $\square \bar h_{\mu\nu}=0$, i.e. transverse–traceless wave solutions with speed $c$ up to corrections suppressed by $(k\ell_P)^2$ set by the lattice dispersion.
+
+\paragraph{Discrete realization (Regge).}
+On the lattice, replace the Einstein–Hilbert term by Regge calculus:
+\begin{equation}
+S_{\rm grav}^{\rm (Regge)} \;=\; \frac{1}{2\kappa}\sum_{h} A_h\,\varepsilon_h,
+\end{equation}
+summing over hinges $h$ (triangles in 4D tesselations), with area $A_h$ and deficit angle $\varepsilon_h$.
+Couple matter at sites/links via the discretized $\mathcal L_{\rm info}$.
+Variation w.r.t. edge lengths gives the discrete Einstein equations, whose coarse–graining reproduces $G_{\mu\nu}=\kappa T_{\mu\nu}$ in the IR.
+As an alternative graph-theoretic proxy, one may use a sum of (weighted) Forman/Ollivier–Ricci curvatures over edges; both routes define a well-posed discrete curvature functional consistent with bijective updates.
+
+\paragraph{Validity domain.}
+All results hold uniformly for small parameters
+\(
+\varepsilon_{\rm IR}=k\ell_P\ll1,\;
+\varepsilon_{\rm curv}=\ell_P/\mathcal R\ll1,\;
+(\partial\rho)^2/\Lambda^4\ll1,
+\)
+with leading deviations entering at $\mathcal O(k^4\ell_P^2)$ (dispersion) or higher-derivative terms in \eqref{eq:constitutive}.
+
+
+\section{Compatibility with Quantum Theory and GR: Recovery Map and Validity Domain}
+
+We formalize the claim that the reversible symmetry–lattice reproduces the standard quantum and geometric limits within a controlled infrared (IR) regime and clarifies when deviations must appear.
+
+\subsection{Small parameters and scales}
+Let $\ell_P$ and $t_P$ be the fundamental lattice scales and define the dimensionless small parameters
+\[
+\varepsilon_{\text{IR}} \equiv k\,\ell_P \ll 1,\qquad 
+\varepsilon_{\text{aniso}} \equiv \frac{\|T^{(4)}\|}{\|T^{(2)}\|},\qquad
+\varepsilon_{\text{curv}} \equiv \ell_P/\mathcal{R},
+\]
+where $k$ is the wave number, $T^{(n)}$ are the $n$th–order rotational invariants of the lattice stencil, and $\mathcal{R}$ is the curvature radius extracted from the coarse–grained stress $T_{\mu\nu}[\phi]$. 
+The recovery of continuum physics holds uniformly for $\varepsilon_{\text{IR}},\varepsilon_{\text{aniso}},\varepsilon_{\text{curv}}\!\to\!0$.
+
+\subsection{Quantum recovery (unitarity and kinematics)}
+Logical bijectivity of the microscopic update $f$ induces a unitary $U_f$ on the configuration basis. 
+In the linear, near–vacuum sector and for $\varepsilon_{\text{IR}}\ll 1$,
+\[
+\omega^2 = c^2 k^2 + \mathcal{O}(k^4\ell_P^2) ,
+\]
+so that $v_g=\partial\omega/\partial k = c + \mathcal{O}(k^2\ell_P^2)$ and the mode kinematics recovers the massless branch. 
+Action quantization per reversible cycle yields
+\[
+E=\hbar\omega,\qquad p=\hbar k,
+\]
+establishing the standard quantum relations in the IR limit.
+
+\subsection{Gauge and photon sector}
+A lattice phase tag $\theta_x$ with redundancy $\phi_x\!\mapsto\! e^{i\chi_x}\phi_x$, $\theta_x\!\mapsto\!\theta_x-\chi_x$ defines a discrete connection $A_\mu=\Delta_\mu \theta$ and field strength $F_{\mu\nu}$. 
+For $\varepsilon_{\text{aniso}}\ll 1$ the coarse–grained action reduces to
+\[
+\mathcal{L}_{\rm eff} = -\tfrac14 F_{\mu\nu}F^{\mu\nu} + \mathcal{O}(\varepsilon_{\text{IR}}^2,\varepsilon_{\text{aniso}}),
+\]
+identifying the photon with the gapless phase mode of reversible symmetry restoration.
+
+\subsection{Geometric (GR-like) recovery}
+Let the coarse–grained energy density and stress define an effective metric perturbation via
+\[
+\square \bar{h}_{\mu\nu} = -\,\alpha\, T_{\mu\nu}[\phi] + \mathcal{O}(\varepsilon_{\text{curv}},\varepsilon_{\text{aniso}}),
+\]
+with gauge constraints inherited from the lattice redundancy. 
+In the weak–field, long–wavelength regime ($\varepsilon_{\text{curv}},\varepsilon_{\text{IR}}\ll 1$) the dynamics reproduces linearized GR; the coupling $\alpha$ sets the emergent gravitational scale.
+
+\subsection{Informal recovery theorem}
+\textbf{Claim (informal).} Under $\varepsilon_{\text{IR}},\varepsilon_{\text{aniso}},\varepsilon_{\text{curv}}\ll 1$, the symmetry–lattice admits an effective field description whose quadratic sector is unitarily equivalent to a free QFT of massless modes with emergent Lorentz symmetry, and whose metric perturbations obey the linearized Einstein equations with coupling $\alpha$. Deviations enter at $\mathcal{O}(k^4\ell_P^2)$ (dispersion), $\mathcal{O}(\varepsilon_{\text{aniso}})$ (rotational breaking), and $\mathcal{O}(\varepsilon_{\text{curv}})$ (finite–curvature corrections).
+
+\subsection{Domain of validity and controlled deviations}
+The framework is \emph{intended} to be fully compatible with standard quantum kinematics and weak–field gravity within the IR window
+\[
+k\,\ell_P \ll 1,\qquad \ell_P \ll \mathcal{R},\qquad \varepsilon_{\text{aniso}}\ll 1,
+\]
+while \emph{predicting} specific, scale–suppressed departures outside it. 
+This provides a compatibility–first pathway: exact agreement where it must hold, and a quantitative account of where it need not.
+
+
+\section{Informational Irreversibility and the Emergent Arrow of Time}
+
+At the microscopic level, the lattice evolves under a strictly reversible mapping  
+\[
+S_{t+1}=f(S_t), \qquad S_{t-1}=f^{-1}(S_t),
+\]
+so that the total informational entropy remains constant,
+\[
+H_{\text{tot}}(S_{t+1}) = H_{\text{tot}}(S_t).
+\]
+However, any local observer has access only to a restricted subset \(A \subset S_t\).  
+For this reduced subsystem the effective entropy  
+\[
+H_A(t) = -\mathrm{Tr}\,\rho_A(t)\ln\rho_A(t)
+\]
+increases monotonically, since correlations with the complementary domain \(B = S_t \setminus A\) become inaccessible:
+\[
+\frac{dH_A}{dt} > 0, \qquad \text{while } H_{\text{tot}} = \text{const.}
+\]
+Irreversibility therefore does not signify a fundamental temporal asymmetry but the continual redistribution of information into non-local correlations beyond the observer’s reach.  
+The apparent ``arrow of time'' emerges as the informational horizon of reversibility—the limit beyond which lost correlations cannot be reconstructed even though global information remains perfectly conserved.
+
+\bigskip
+This formulation directly connects microscopic reversibility with macroscopic thermodynamic behavior.  
+Entropy growth reflects the observer’s limited access to global correlations rather than an intrinsic loss of information.  
+Time’s arrow thus appears not as a built-in asymmetry of nature but as an emergent statistical feature of informationally incomplete description.
+
+
+\section{Observation Limit and the Irreducibility of Reality Levels}
+\label{sec:observation_limit}
+
+In the informational model of spacetime, the act of observation cannot be external to the system: 
+every measurement process is itself part of the lattice dynamics. 
+Thus, the question \emph{``what is observed''} becomes equivalent to 
+\emph{``what can be preserved without violating reversibility''}. 
+Reality does not split into an observer and an object—it is a closed network of informational exchange, 
+where every attempt to extract data constitutes an internal interaction.
+
+\subsection{Hierarchy of Levels and Information Loss}
+Let the lattice be described by a discrete set of states \(S_i(t)\) 
+with spacings \(a=\ell_P\) and \(\tau=t_P\). 
+The transition to a coarse-grained level \(L_n\) is defined by an averaging operator:
+\[
+S_j^{(n)} = A_n\{S_i(t)\},
+\]
+where \(A_n\) removes part of the correlations.
+Each such transformation reduces the amount of accessible information:
+\[
+I_{n+1} < I_n.
+\]
+The loss of correlations under coarse-graining does not mean that information is physically destroyed, 
+but only that the observer’s ability to reconstruct the full correlations is limited.
+Hence, the \emph{irreducibility of levels} reflects not an ontological gap between worlds, 
+but the epistemic boundary of reconstruction within a globally reversible substrate.
+
+\subsection{Observation Limit}
+To obtain information about a cell, the probing energy must satisfy
+\[
+E \sim \frac{h c}{\lambda}.
+\]
+As \(\lambda \to \ell_P\), the energy approaches the Planck scale, 
+and further increase of \(E\) does not improve knowledge but modifies the lattice state itself.
+The informational gain reaches a limit:
+\[
+\Delta I \to 0 \quad \text{for} \quad E \ge E_P.
+\]
+This is not a physical collapse of the substrate but a limit of \emph{observability}— 
+the point where existence and cognition coincide. 
+Beyond this boundary, the object and the act of measurement become indistinguishable aspects 
+of the same reversible dynamics.
+
+\subsection{Butterfly Effect and Statistical Irreversibility}
+Reversible lattice dynamics exhibits sensitivity to initial conditions:
+\[
+\delta S(t+1) \approx \Lambda\,\delta S(t), \qquad \Lambda>1.
+\]
+Infinitesimal local perturbations lead to exponential divergence of trajectories.
+Although the global evolution remains bijective, a limited observer perceives it as statistical irreversibility. 
+Entropy increases not because information is lost, but because it is redistributed into correlations 
+that lie beyond the observer’s reach—an effect experienced as the \emph{arrow of time}.
+
+\subsection{Two-Slit Experiment}
+Let the probe state be described by the vector \(\Psi(x,t)\) on the lattice.  
+Without observation, evolution is reversible:
+\[
+\Psi_{t+1} = U\,\Psi_t, \qquad U^\dagger U = 1.
+\]
+Observation introduces an information-exchange operator \(M\):
+\[
+\Psi'_{t+1} = M\,U\,\Psi_t, \qquad M^\dagger M \neq 1.
+\]
+The operator \(M\) does not break global reversibility but locally erases correlations between cells, 
+fixing one of the compatible configurations.
+Interference arises when the lattice retains phase memory of previous perturbations— 
+each particle modifies the probability distribution of the network even when detected individually.
+
+\subsection{Gödel Limit}
+As Gödel demonstrated, no system capable of describing itself can be complete.  
+The physical universe, regarded as a reversible informational lattice, obeys the same principle:  
+complete knowledge of it is unattainable because any act of knowing is itself a state of the system.  
+The limit of observation therefore coincides with the limit of self-comprehension.
+
+\bigskip
+In this interpretation, the ``collapse'' of structure marks not the breakdown of reversibility 
+but the epistemic horizon of observation within a self-contained informational universe.
+
+
+\section{Discussion}
+
+The proposed reversible symmetry‐lattice framework unifies discrete computational dynamics with physical ontology. 
+In this picture, the universe operates as a self‐consistent informational process rather than as a mechanical system evolving within an external space. 
+Space, time, and energy emerge from the reversible redistribution of symmetry within a binary substrate whose evolution conserves total information.
+
+In comparison with classical digital physics, the present model introduces an explicit informational geometry. 
+Local symmetry defines the equilibrium structure of the lattice, while its violations generate persistent topological defects—interpreted as matter—and propagating symmetry restorations—interpreted as fields. 
+Thus, conservation laws such as energy, momentum, and charge arise not as imposed constraints but as invariants of reversible, symmetry‐preserving computation.
+
+Logical reversibility ensures global unitarity, while the statistical loss of microscopic correlations under coarse‐graining accounts for the thermodynamic arrow of time. 
+This view treats irreversibility as epistemic rather than ontological: entropy growth reflects the observer’s limited access to micro‐correlations, not an intrinsic asymmetry of physical law. 
+Hence, temporal directionality and quantum indeterminacy emerge as large‐scale consequences of informational incompleteness within an otherwise reversible substrate.
+
+Conceptually, this framework situates itself between two historical approaches. 
+From Fredkin’s digital mechanics it inherits bijective computation and strict conservation of information; from Ising‐type and lattice‐Boltzmann models it inherits local symmetry structure and coarse‐grained field behavior. 
+The resulting synthesis extends both: information becomes not a descriptor of matter but its very substance, while symmetry replaces force as the organizing principle of dynamics.
+
+Matter, in this interpretation, is the universe’s structural imperfection—a stable asymmetry embedded within an otherwise symmetric informational fabric. 
+Fields represent the geometric mediation of that imperfection, and geometry itself arises as a large‐scale description of informational tension. 
+Reality, therefore, may be understood as a reversible computation continuously negotiating between symmetry and disturbance, between perfect information and its stable, localized deviations.
+
+\subsection*{Open Problems}
+Several open questions remain:
+\begin{itemize}
+  \item How quantum superposition emerges from reversible classical dynamics.
+  \item Whether fermionic statistics can arise from lattice topology (e.g., braid or twist symmetries).
+  \item How causal-set structures relate to this lattice under relativistic coarse-graining.
+\end{itemize}
+
+\subsection{Emergence of Coherent States and Contextual Compatibility of Clusters}
+In the lattice framework, quantum‐like superposition does not represent a multiplicity of independent states but arises from the symmetry isotropy of a cluster in equilibrium with the informational background. The set of coherent states corresponds to all internal configurations of the cluster related by isomorphisms that preserve its energy and topological invariants. Before interaction with other clusters or lattice perturbations, these configurations remain indistinguishable in terms of global correlations and are therefore described by a single “neutral” state.
+
+The geometric structure of the cluster determines its phase‐like properties: coherence appears when geometric parameters—periodicities, orientations, and local symmetries—are aligned with those of the background or with other clusters. The coincidence of these parameters serves as a geometric analogue of phase matching in quantum systems, enabling interaction. When geometries are mismatched, clusters remain indifferent to one another, which corresponds to decoherence.
+
+An isolated cluster is not universally compatible with all other structures in the lattice. Its potential for interaction is contextually limited by local conditions—\textit{informational orientation} and symmetry tension of the surrounding field. Here, “orientation” does not imply mechanical deformation but the direction of a local vector of symmetry pressure defined by the states of neighboring cells. The lattice remains topologically static, yet its local states can rearrange, forming a dynamic informational background without physical stretching. Hence, the state of indeterminacy does not imply universal connectivity but reflects the multiplicity of admissible, yet non‐actualized, resonant couplings.
+
+The transition to a definite configuration during interaction is not spontaneous; it is determined by the microstate of the surrounding lattice and its correlations with other clusters, which remain unobservable at the macroscopic level. The apparent randomness of this transition therefore reflects epistemic limitation rather than fundamental indeterminacy.
+
+To fully ground this epistemic view, it is necessary to clarify the ontological role of information within the lattice framework.
+
+\subsection*{Ontological Status of Information}
+In this framework, information is not treated as a secondary descriptor of physical states but as the primary substrate from which physicality itself emerges. Matter, energy, and geometry represent stable, reversible expressions of informational constraints imposed by the lattice's bijective dynamics. Hence, the distinction between physical and informational variables loses its meaning: what appears as a “hidden parameter” from the observer's perspective is merely an inaccessible configuration of the same informational substrate. The apparent duality of information and matter is thus epistemic rather than ontological, reflecting the limits of observational access rather than any fundamental division in nature.
+
+Within this informational ontology, the dynamic stability of the lattice manifests as a natural tendency toward local symmetry restoration.
+
+\subsection{Informational Tension and the Origin of Symmetry Restoration}
+The lattice’s apparent tendency to restore local symmetry does not arise from an external potential but from the intrinsic requirement of reversibility.
+In a bijective system, every configuration must admit an inverse mapping.
+Local asymmetries correspond to configurations whose reversibility is conditionally constrained—they require correlated compensations in neighboring cells to preserve global bijectivity.
+This conditional reversibility defines an \textit{informational tension}: a measure of how much local structure deviates from perfect symmetry while still remaining compatible with the global reversible rule.
+
+The “drive” to restore symmetry is therefore not a physical force but a computational necessity.
+A configuration that minimizes informational tension maximizes the number of reversible microstates and preserves the consistency of the global mapping.
+In this view, the potential underlying all lattice dynamics is informational rather than energetic, emerging naturally from the logical constraints of reversible evolution.
+
+\section{Conclusion}
+
+Matter and vacuum appear as complementary expressions of one reversible informational substrate. 
+Defects (\textit{symmetry anomalies}) correspond to persistent, topological imbalances of local symmetry, while fields represent the lattice’s geometric response that strives to restore equilibrium. 
+In this framework, reversibility guarantees the conservation of total information, and global symmetry defines the structural order from which physical laws emerge.
+
+The unity of computation, geometry, and symmetry suggests that physical reality does not evolve within information—it \emph{is} information in motion. 
+The lattice acts as both the processor and the processed, continuously resolving the tension between order and deviation, between equilibrium and defect. 
+Space and time arise as relational aspects of this reversible negotiation; energy and mass are measures of its local persistence. 
+
+Hence, the distinction between physics and information theory dissolves: dynamics becomes computation, and computation becomes geometry. 
+Reality can thus be modeled as a reversible computational process that continuously maintains equilibrium between order and disturbance, providing a unified informational basis for physical phenomena.
+
+\newpage
+\section*{Acknowledgments}
+The author thanks colleagues in theoretical physics and digital ontology for valuable discussions refining this symmetry–lattice framework.
+
+\appendix
+\section{Verifiability Roadmap (Optional for Readers)}
+\label{app:verification}
+
+\subsection{Analytical checks}
+\begin{enumerate}
+\item \textbf{IR dispersion:} derive $\omega^2=c^2k^2+\beta k^4\ell_P^2+\dots$ for the chosen reversible stencil; verify $\beta$ is rotationally averaged (small $\varepsilon_{\text{aniso}}$).
+\item \textbf{Unitarity:} construct the permutation matrix of $f$ on a finite torus and confirm $U_f^\dagger U_f=I$ and spectrum on unit circle.
+\item \textbf{Gauge sector:} show that phase redundancy produces a lattice $U(1)$ with Maxwell kinetic term at quadratic order.
+\item \textbf{Geometric limit:} compute $T_{\mu\nu}[\phi]$ under coarse graining and recover the linearized GR kernel with coupling $\alpha$.
+\end{enumerate}
+
+\subsection{Numerical toy checks}
+\begin{enumerate}
+\item \textbf{Wave packet propagation:} measure $v_g(k)$ and fit $\omega(k)$ to extract the $k^4$–coefficient.
+\item \textbf{Isotropy test:} rotate initial packets and show angular variance of $v_g$ is $\mathcal{O}(\varepsilon_{\text{aniso}})$.
+\item \textbf{Defect dynamics:} identify a localized minimal–action defect, verify $E(v)=M+\tfrac12 M v^2+\dots$ and internal frequency $M=\hbar\omega_0$.
+\end{enumerate}
+
+\subsection{Phenomenology pointers (nonessential)}
+Any potential tension with established bounds must be suppressed by $k^2\ell_P^2$ or smaller (photon time–of–flight dispersion, isotropy of wave propagation, etc.). These items are \emph{optional} and not required for the core compatibility program.
+
+
+\section{Intellectual Integrity and Provenance Statement}
+\label{sec:provenance}
+
+This manuscript and all its mathematical formulations, notations, and conceptual structures
+are original contributions of the author, developed within the framework of the
+Topological Dynamics of Symmetry (TDS) model.
+
+All derivations, equations, and sections presented herein — including but not limited to
+the informational action principle, reversible lattice dynamics, and emergent gauge
+and gravitational sectors — are the result of independent theoretical investigation.
+Any overlap with existing literature is coincidental and arises from the use of
+standard mathematical formalisms in physics.
+
+The author explicitly reserves all rights to the conceptual framework, including:
+(i) the definition of informational curvature,
+(ii) the reversible lattice formalism,
+(iii) the interpretation of charge, mass, and spin as informational invariants,
+and (iv) the mapping between informational tension and geometric curvature.
+
+For citation or derivative use of these results, proper attribution must be maintained to:
+\textbf{Valeri Schäfer, “Symmetry Anomalies and Reversible Lattice Dynamics” (Zenodo, 2025)}.
+
+
+% ------------------ BIBLIOGRAPHY ------------------
+
+\begin{thebibliography}{9}
+
+\bibitem{fredkin1990}
+E. Fredkin,
+\textit{Digital Mechanics: An Informational Process Based on Reversible Universal Cellular Automata},
+Physica D, 45 (1990).
+
+\bibitem{wolfram2002}
+S. Wolfram,
+\textit{A New Kind of Science},
+Wolfram Media, Champaign, IL (2002).
+
+\bibitem{wheeler1989}
+J. A. Wheeler,
+\textit{Information, Physics, Quantum: The Search for Links},
+Proc. 3rd Int. Symp. on Foundations of Quantum Mechanics, Tokyo (1989).
+
+\bibitem{landauer1991}
+R. Landauer,
+\textit{Information is Physical},
+Physics Today (1991).
+
+\bibitem{lloyd2006}
+S. Lloyd,
+\textit{Programming the Universe: A Quantum Computer Scientist Takes on the Cosmos},
+Knopf, New York (2006).
+
+\bibitem{rovelli2004}
+C. Rovelli,
+\textit{Quantum Gravity},
+Cambridge University Press (2004).
+
+\bibitem{smolin2001}
+L. Smolin,
+\textit{Three Roads to Quantum Gravity},
+Basic Books, New York (2001).
+
+\bibitem{tegmark2014}
+M. Tegmark,
+\textit{Our Mathematical Universe},
+Knopf, New York (2014).
+
+\end{thebibliography}
+
+
+\end{document}
