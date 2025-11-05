@@ -1,69 +1,104 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[english]{babel}
-\usepackage{amsmath,amssymb}
-\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{cmap}
+\usepackage{amsmath, amssymb, amsthm}
 \usepackage{geometry}
+\usepackage{setspace}
 \usepackage{hyperref}
-\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
-\setlength{\parskip}{0.6em}
-\setlength{\parindent}{0pt}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{newtxtext,newtxmath}
 
-\title{\Large\bfseries Manifesto \\ Theory of Dynamic Symmetry (TDS)}
+% Geometry and spacing
+\geometry{top=2.7cm, bottom=2.7cm, left=2.8cm, right=2.8cm}
+\setstretch{1.25}
+\setlength{\parskip}{0.9em}
+\setlength{\parindent}{0pt}
+\titlespacing*{\section}{0pt}{1.5em}{0.9em}
+
+% ===================== TITLE =====================
+\title{\textbf{Manifest: Theory of Dynamic Symmetry (TDS Framework)}}
 \author{Valeri Schäfer}
-\date{\small Zenodo DOI: \href{https://doi.org/10.5281/zenodo.17465190}{10.5281/zenodo.17465190} \\
--- All rights reserved -- November 2025}
+\date{Zenodo DOI: \href{https://doi.org/10.5281/zenodo.17465190}{10.5281/zenodo.17465190} \\ 
+\vspace{0.3em}
+-- Actual version November 2025}
 
 \begin{document}
 \maketitle
+\tableofcontents
+\newpage
 
-\section*{Summary}
+% ===================== CORE PRINCIPLE =====================
+\section*{Core Principle: Reversible Symmetry Lattice (RSL)}
+\addcontentsline{toc}{section}{Core Principle: Reversible Symmetry Lattice (RSL)}
 
-\textbf{Essence.}  
-The Theory of Dynamic Symmetry (TDS) proposes that physical reality is a reversible informational lattice in which all phenomena arise as motions of symmetry.  
-Matter represents stable symmetry anomalies; fields are geometric responses of the lattice to local asymmetry; energy quantifies the rate of distinguishability between states.
-
-\section*{Fundamental Relations}
-
-Each reversible cell of the lattice carries one quantum of action, \(h\).  
-If an element of the system completes distinguishable cycles with frequency \(\nu\), the minimal energy of that process is
+The Theory of Dynamic Symmetry (TDS) describes reality as a discrete, reversible informational process operating on the Planck-scale lattice --- the \emph{Reversible Symmetry Lattice} (RSL).  
+At its foundation, the lattice evolves through bijective transformations:
 \[
-E = h\nu.
-\]
-For a collection of \(N\) reversible elements with per-cell update rate \(\nu_{\mathrm{upd}}\), the minimal energetic power is
-\[
-\boxed{P_{\min}=h\,N\,\nu_{\mathrm{upd}}.}
-\]
-Scaling by system size \(L\) and effective lattice spacing \(a_{\rm eff}\), and assuming \(\nu_{\mathrm{upd}}\lesssim c/a_{\rm eff}\), yields
-\[
-\boxed{P_{\min}\approx h\,c\,\frac{L^{3}}{a_{\rm eff}^{4}}.}
-\]
-The corresponding minimal work over simulated duration \(\mathcal{T}\) is
-\[
-\boxed{W_{\min}=P_{\min}\,\mathcal{T}\approx h\,c\,\mathcal{T}\,\frac{L^{3}}{a_{\rm eff}^{4}}.}
+S_{t+1} = B S_t,\qquad B^{-1}\ \text{exists}.
 \]
 
-\section*{Implications and Consistency}
+Each configuration \(S_t\) encodes the global informational state of the system.  
+The total informational energy is conserved:
+\[
+I_{\text{total}} = H(S_t) = \text{const},
+\]
+and decomposes into symmetric and asymmetric components:
+\[
+E_{\text{sym}}[S_t] + E_{\text{asym}}[S_t] = E_0 = \text{const}.
+\]
 
-\begin{itemize}
-  \item \textbf{Equivalence.}  
-  Informational throughput (number of reversible cycles per second) is directly equivalent to minimal energetic flux: \(P_{\min}=hU\).  
-  Information and energy obey the same limit of distinguishability.
-  \item \textbf{Empirical coherence.}  
-  Preliminary comparisons with real data --- from quantum, optical, and computational systems --- show agreement within \(90\text{–}95\%\) across many orders of magnitude, indicating that informational and physical work share the same reversible bound.
-  \item \textbf{Philosophical meaning.}  
-  TDS does not reject existing physics; it completes it, showing that constants and limits arise naturally from the discrete reversible structure of distinguishability.
-\end{itemize}
+We define these components as:
+\[
+E_{\text{sym}} = J \sum_{\langle ij\rangle} [s_i s_j]_+, \qquad
+E_{\text{asym}} = J \sum_{\langle ij\rangle} [-s_i s_j]_+,
+\]
+where \(J > 0\) represents the coupling energy between adjacent lattice states,  
+and \([x]_+ = \max(x, 0)\) isolates positive-symmetry correlations.
 
-\section*{Conclusion}
+\vspace{0.8em}
+Reversibility ensures that no information is lost --- every state has an inverse.  
+Temporal evolution is thus a reconfiguration of symmetry, not destruction.  
+Matter, fields, and spacetime curvature emerge as higher-order patterns within this dynamic symmetry network.
 
-TDS provides a compact ontology: reality is a dynamic network of distinguishability, where energy, mass, and time emerge as consequences of reversible symmetric motion on the Planck lattice.  
-This manifesto is an invitation to verification --- the idea is simple to state yet yields rigorous and testable consequences.
+% ===================== FUNDAMENTAL CONSTANT RELATIONS =====================
+\section*{Fundamental Constants and Lattice Relations}
+\addcontentsline{toc}{section}{Fundamental Constants and Lattice Relations}
 
-\vfill
-\noindent\small
-Valeri Schäfer --- Hamburg, Germany \\
-Zenodo DOI: \href{https://doi.org/10.5281/zenodo.17537189}{10.5281/zenodo.17537189} \\
-All rights reserved --- November 2025
+In the framework of the Theory of Dynamic Symmetry (TDS), all measurable constants arise not as external inputs but as emergent invariants of the Reversible Symmetry Lattice (RSL).  
+They are stable informational ratios that remain unchanged under reversible transformations of the lattice.  
+Thus, physical ``laws'' are merely expressions of these invariant proportions --- the grammar of symmetry through which the lattice maintains coherence.
+
+\[
+\begin{aligned}
+c &= \frac{\ell_P}{t_P}, 
+&\text{(limit of information propagation)} \\
+\hbar &\sim J\,t_P, 
+&\text{(quantum of reversible action)} \\
+G &\sim \frac{\ell_P^{2} c^{3}}{\hbar}, 
+&\text{(elastic coupling of lattice curvature)} \\
+\alpha &\sim \frac{g^2}{4\pi\,\hbar c}, 
+&\text{(asymmetry-channel coupling strength)} \\
+\mu_0\,\varepsilon_0 &= \frac{1}{c^2},
+&\text{(electromagnetic symmetry constraint)} \\
+k_B &: \Delta E = k_B T \ln 2, 
+&\text{(information–entropy conversion)}.
+\end{aligned}
+\]
+
+\vspace{0.8em}
+All macroscopic constants therefore originate from the primary triad 
+\((\ell_P,\,t_P,\,J)\) and the informational coefficient \(k_B\).  
+They define how space and time emerge as discrete intervals, how energy becomes reversible exchange, and how temperature encodes the statistical rhythm of asymmetry flips --- the heartbeat of the lattice itself.
+
+% ===================== CLOSING NOTE =====================
+\section*{Closing Remark}
+\addcontentsline{toc}{section}{Closing Remark}
+
+The TDS framework replaces the notion of continuous substance with informational reversibility.  
+Reality becomes a computation of symmetry --- a self-consistent lattice where the Planck scale sets the minimal interval of transformation, and all constants emerge as expressions of its internal logic.  
+This structure unifies geometry, energy, and information under one reversible dynamic.
+
 \end{document}
